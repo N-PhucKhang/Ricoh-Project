@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>check_Text1</name>
+   <tag></tag>
+   <elementGuidId>e0230fac-3e3f-4b35-9e87-a1ae31423c7a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//table[@id=&quot;mainlist&quot;]/tbody/tr[2]/td[3]/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//table[@id=&quot;mainlist&quot;]/tbody/tr[2]/td[3]/span</value>
+   </webElementProperties>
+</WebElementEntity>

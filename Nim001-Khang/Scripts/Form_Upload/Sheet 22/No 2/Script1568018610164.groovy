@@ -48,9 +48,9 @@ for (int i = 1; i <= updatekubun; i++) {
 		def connect = CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com',
 			'log_search_user', 'Log_seaRch_uSer', "imart_rfg")
 		def recordset = CustomKeywords.'com.database.connectSql.executeQuery'("update IMFR_UT_SF_NIM001_APL002 set IMFR_UD_TANKA_TEKIYO_DATE = TO_DATE('2019/09/09','yyyy/MM/dd') where IMFR_SD_INSERT_ID = '8fbl8qi8zxe6tff'")
-		def recordset1 = CustomKeywords.'com.database.connectSql.executeQuery'("update IMFR_UT_SF_NIM001_APL002_TB1 set  IMFR_UD_TB1_UPDATE_KUBUN = '1' ,IMFR_UD_TB1_JYORYO_SYS_CODE = '13311111116' where IMFR_SD_INSERT_ID = '8fbl8qi8zxe6tff'")
+		def recordset1 = CustomKeywords.'com.database.connectSql.executeQuery'("update IMFR_UT_SF_NIM001_APL002_TB1 set  IMFR_UD_TB1_UPDATE_KUBUN = '" + i + "' ,IMFR_UD_TB1_JYORYO_SYS_CODE = '13311111116' where IMFR_SD_INSERT_ID = '8fbl8qi8zxe6tff'")
 		CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
-		
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approval_Process'))
 		WebUI.delay(2)
 		

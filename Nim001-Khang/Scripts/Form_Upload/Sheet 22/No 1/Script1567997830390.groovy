@@ -20,30 +20,20 @@ def recordset = CustomKeywords.'com.database.connectSql.executeQuery'("update IM
 def recordset1 = CustomKeywords.'com.database.connectSql.executeQuery'("update IMFR_UT_SF_NIM001_APL002_TB1 set IMFR_UD_TB1_JYORYO_SYS_CODE = '11111111116' where IMFR_SD_INSERT_ID = '8fbl8qi8zxe6tff'")
 CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
 
+//login IM
 WebUI.openBrowser('')
-
 WebUI.navigateToUrl('http://132.145.113.198/imsl/login')   // Open IM
-
 WebUI.clearText(findTestObject('Login/textbox_Username'))  // Clear textbox user
-
 WebUI.setText(findTestObject('Login/textbox_Username'), 'dev09')  // Input user
-
 WebUI.setText(findTestObject('Login/textbox_Password'), 'dev09')  // Input password
-
 WebUI.click(findTestObject('Login/button_Login'))   // Click button login
-
 WebUI.waitForPageLoad(2)
 
 WebUI.navigateToUrl('http://132.145.113.198/imsl/im_workflow/user/process/process_list')
-
 WebUI.waitForPageLoad(2)
-
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_into_ApprovePage'))
-
 WebUI.waitForPageLoad(2)
-
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approve'))
-
 WebUI.delay(2)
 
 WebUI.switchToFrame(findTestObject('Form_Upload/Frame1'), 2)
@@ -51,15 +41,10 @@ WebUI.switchToFrame(findTestObject('Form_Upload/Frame2'), 2)
 WebUI.switchToFrame(findTestObject('Form_Upload/Frame3'), 2)
 
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approval_Process'))
-
 WebUI.delay(1)
-
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
-
 errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-
 WebUI.verifyMatch(errMsg, '処理に失敗しました。 単価適用日に祝日、休日が設定されています。差戻してください。', false)
-
 WebUI.delay(2)
 
 WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet22\\No1.png') // Take screen shot

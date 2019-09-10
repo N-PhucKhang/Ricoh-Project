@@ -26,7 +26,7 @@ WebUI.click(findTestObject('Object Repository/Form_Upload/button_into_ApprovePag
 WebUI.waitForPageLoad(2)
 
 int updatekubun = 3;
-for (int i = 1; i <= updatekubun; i++) {
+for (int i = 2; i <= updatekubun; i++) {
 		//sql
 		def connect = CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com',
 			'log_search_user', 'Log_seaRch_uSer', "imart_rfg")

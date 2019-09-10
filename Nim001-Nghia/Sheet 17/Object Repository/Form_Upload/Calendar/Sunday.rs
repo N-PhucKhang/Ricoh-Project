@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Sunday</name>
+   <tag></tag>
+   <elementGuidId>9ca28618-b7c2-4cec-a3f1-90fc656d3fdf</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[5]/td[1]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[5]/td[1]/a</value>
+   </webElementProperties>
+</WebElementEntity>

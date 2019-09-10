@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Execute validation check processing when importing (the attachment) has errors but still click on Apply button</description>
+   <name>Execute validation check processing when importing (the attachment) has errors but still click on Apply button</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7a01a477-294b-4b7c-9781-ae49bbe63c60</testCaseGuid>
+</TestCaseEntity>

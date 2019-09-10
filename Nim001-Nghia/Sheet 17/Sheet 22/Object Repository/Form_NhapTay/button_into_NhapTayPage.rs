@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_into_NhapTayPage</name>
+   <tag></tag>
+   <elementGuidId>f3a61c3a-83ca-46a3-b9b2-9c1ce412b367</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//table[@id='flowList']//tr//td[text()='sf_nim001_単価登録申請（手入力用）']//parent::tr//td//a//span[@class='im-workflow-icon-matter-next']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//table[@id='flowList']//tr//td[text()='sf_nim001_単価登録申請（手入力用）']//parent::tr//td//a//span[@class='im-workflow-icon-matter-next']</value>
+   </webElementProperties>
+</WebElementEntity>

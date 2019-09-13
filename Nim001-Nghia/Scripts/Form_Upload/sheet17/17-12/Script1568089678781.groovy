@@ -83,15 +83,13 @@ WebUI.click(findTestObject('Form_NhapTay/clickshohinCDRow1'))
 
 WebUI.click(findTestObject('Form_NhapTay/findShohinCDRow1'))
 
-WebUI.click(findTestObject('Form_NhapTay/chooseShohinCD004'))
+WebUI.click(findTestObject('Form_NhapTay/choose_shohin_0001'))
 
 WebUI.click(findTestObject('Form_NhapTay/newtanka_valueRow1'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Form_NhapTay/newtankaValueRow1'), '12000')
 
-WebUI.delay(20)
-
 WebUI.click(findTestObject('Object Repository/Form_NhapTay/btnApply'))
 
-WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No9.png')
+WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No12.png')
 

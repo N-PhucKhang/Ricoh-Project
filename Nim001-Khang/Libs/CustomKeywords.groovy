@@ -37,3 +37,7 @@ def static "com.database.connectSql.execute"(
     (new com.database.connectSql()).execute(
         	queryString)
 }
+
+def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
+    (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
+}

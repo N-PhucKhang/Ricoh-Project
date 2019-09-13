@@ -4,6 +4,19 @@
    <name>button_ClosePopup</name>
    <tag></tag>
    <elementGuidId>e8067da8-1a42-49b0-93c9-5c2994bdd464</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;close&quot;]/span</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;close&quot;]/span</value>
+   </webElementProperties>
 </WebElementEntity>

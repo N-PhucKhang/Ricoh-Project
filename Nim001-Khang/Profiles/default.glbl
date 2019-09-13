@@ -4,4 +4,39 @@
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev04'</initValue>
+      <name>User</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev09'</initValue>
+      <name>UserAdmin</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Data Files/Data_Sheet22/No2.csv'</initValue>
+      <name>No2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Data Files/Data_Sheet22/no_error.csv'</initValue>
+      <name>NoError</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Data Files/Data_Sheet22/NotCSV.xlsx'</initValue>
+      <name>NotCSV</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Data Files/Data_Sheet22/No18-'</initValue>
+      <name>No18_</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Data Files/Data_Sheet22/No19-'</initValue>
+      <name>No19_</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

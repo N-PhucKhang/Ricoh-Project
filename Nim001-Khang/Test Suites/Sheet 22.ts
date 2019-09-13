@@ -16,4 +16,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_Upload/Sheet 22/No 1</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>de13e5b7-6691-474a-b7c3-0cd4fde2138b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Form_Upload/Sheet 22/No 2</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

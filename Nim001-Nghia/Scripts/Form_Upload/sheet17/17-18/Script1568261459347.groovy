@@ -23,10 +23,11 @@ WebUI.waitForPageLoad(2)
 WebUI.clearText(findTestObject('Login/textbox_Username' // Clear textbox user
         ))
 
-WebUI.setText(findTestObject('Login/textbox_Username'), 'dev06' // Input user
+WebUI.setText(findTestObject('Login/textbox_Username'), GlobalVariable.username // Input user
     )
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev06' // Input password
+WebUI.setText(findTestObject('Login/textbox_Password'), GlobalVariable.pass // Input password
+    // Input password
     )
 
 WebUI.click(findTestObject('Login/button_Login' // Click button login
@@ -59,13 +60,13 @@ for (int j = 0; j <= 120; j++) {
     if (WebUI.waitForElementNotPresent(findTestObject('Object Repository/Form_NhapTay/checkbox_Update'), 5) == false) {
         WebUI.waitForPageLoad(60)
 
-        WebUI.waitForElementPresent(findTestObject('Form_NhapTay/btnUpdate'), 60)
+        WebUI.waitForElementPresent(findTestObject('Form_NhapTay/btnInsert'), 60)
 
-        WebUI.waitForElementVisible(findTestObject('Form_NhapTay/btnUpdate'), 60)
+        WebUI.waitForElementVisible(findTestObject('Form_NhapTay/btnInsert'), 60)
 
-        WebUI.waitForElementClickable(findTestObject('Form_NhapTay/btnUpdate'), 60)
+        WebUI.waitForElementClickable(findTestObject('Form_NhapTay/btnInsert'), 60)
 
-        WebUI.click(findTestObject('Form_NhapTay/btnUpdate'))
+        WebUI.click(findTestObject('Form_NhapTay/btnInsert'))
 
         break
     } else {
@@ -77,21 +78,9 @@ for (int j = 0; j <= 120; j++) {
 
 WebUI.click(findTestObject('Form_NhapTay/btnDelete'))
 
-WebUI.click(findTestObject('Form_NhapTay/btnAddGridInsert'))
-
-WebUI.click(findTestObject('Form_NhapTay/clickshohinCDRow1'))
-
-WebUI.click(findTestObject('Form_NhapTay/findShohinCDRow1'))
-
-WebUI.click(findTestObject('Form_NhapTay/chooseShohinCD004'))
-
-WebUI.click(findTestObject('Form_NhapTay/newtanka_valueRow1'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.setText(findTestObject('Form_NhapTay/newtankaValueRow1'), '12000')
-
-WebUI.delay(20)
+WebUI.click(findTestObject('Form_NhapTay/btnAddGridUpdate'))
 
 WebUI.click(findTestObject('Object Repository/Form_NhapTay/btnApply'))
 
-WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No9.png')
+WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No18.png')
 

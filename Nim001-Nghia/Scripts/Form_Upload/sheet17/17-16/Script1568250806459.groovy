@@ -23,10 +23,11 @@ WebUI.waitForPageLoad(2)
 WebUI.clearText(findTestObject('Login/textbox_Username' // Clear textbox user
         ))
 
-WebUI.setText(findTestObject('Login/textbox_Username'), 'dev06' // Input user
+WebUI.setText(findTestObject('Login/textbox_Username'), GlobalVariable.username // Input user
     )
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev06' // Input password
+WebUI.setText(findTestObject('Login/textbox_Password'), GlobalVariable.pass // Input password
+    // Input password
     )
 
 WebUI.click(findTestObject('Login/button_Login' // Click button login
@@ -83,15 +84,17 @@ WebUI.click(findTestObject('Form_NhapTay/clickshohinCDRow1'))
 
 WebUI.click(findTestObject('Form_NhapTay/findShohinCDRow1'))
 
-WebUI.click(findTestObject('Form_NhapTay/chooseShohinCD004'))
+WebUI.click(findTestObject('Form_NhapTay/choose_shohin_0002'))
 
 WebUI.click(findTestObject('Form_NhapTay/newtanka_valueRow1'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Form_NhapTay/newtankaValueRow1'), '12000')
+WebUI.setText(findTestObject('Form_NhapTay/newtankaValueRow1'), '100')
 
-WebUI.delay(20)
+WebUI.click(findTestObject('Form_NhapTay/clickNewShohinCD'))
+
+WebUI.setText(findTestObject('Form_NhapTay/settext_newShohinCD'), '1000')
 
 WebUI.click(findTestObject('Object Repository/Form_NhapTay/btnApply'))
 
-WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No9.png')
+WebUI.takeScreenshot('D:\\KatalonScreenShot\\Sheet17\\Sheet17_No16.png')
 

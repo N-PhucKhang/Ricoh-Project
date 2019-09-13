@@ -12,7 +12,7 @@ WebUI.callTestCase(findTestCase('Sub/Into_Upload_Page'), [:])
 WebUI.click(findTestObject('Form_Upload/button_AddFile' // Click button add file
         ))
 
-WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), CustomKeywords.'com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath'() + GlobalVariable.NoError)
+WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), RunConfiguration.getProjectDir() + GlobalVariable.NoError)
 
 WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), CustomKeywords.'com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath'() + GlobalVariable.NotCSV)
 

@@ -7,13 +7,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 "Update record by sql"
-def connect = CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 
-    'log_search_user', 'Log_seaRch_uSer', 'imart_rfg')
-//String a = 'update IMFR_UT_SF_NIM001_APL002 set IMFR_UD_TANKA_TEKIYO_DATE = TO_DATE(\'2019/09/23\',\'yyyy/MM/dd\') where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\''
-//WebUI.comment(a)
-def recordset = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SF_NIM001_APL002 set IMFR_UD_TANKA_TEKIYO_DATE = TO_DATE(\'2019/09/23\',\'yyyy/MM/dd\') where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\'')
-def recordset1 = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SF_NIM001_APL002_TB1 set IMFR_UD_TB1_JYORYO_SYS_CODE = \'11111111116\' where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\'')
-CustomKeywords.'com.database.connectSql.closeDatabaseConnection'() 
+def connect = CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com',
+	'log_search_user', 'Log_seaRch_uSer', 'imart_rfg')
+def recordset = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SF_NIM001_APL002 set IMFR_UD_TANKA_TEKIYO_DATE = TO_DATE(\'2019/09/09\',\'yyyy/MM/dd\') where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\'')
+def recordset1 = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SF_NIM001_APL002_TB1 set IMFR_UD_TB1_SHOHIN_CODE = \'A00003\' , IMFR_UD_TB1_JYORYO_SYS_CODE = \'11111111117\' , IMFR_UD_TB1_UPDATE_KUBUN =  \'1\'  where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\'')
+CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
 
 "Login Intra_mart"
 WebUI.callTestCase(findTestCase('Common/Login_User_Admin'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -33,11 +31,9 @@ WebUI.switchToFrame(findTestObject('Form_Upload/Frame3'), 2)
 "Click button Approval_Process"
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approval_Process'))
 WebUI.delay(1)
-
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
 "Verify Error Msg"
 errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-WebUI.verifyMatch(errMsg, '処理に失敗しました。 単価適用日に祝日、休日が設定されています。差戻してください。', false)
+WebUI.verifyMatch(errMsg, '処理に失敗しました。 MoM顧客別単価マスタに登録済みコードが設定されています。差戻してください。', false)
 "Close browse"
 WebUI.closeBrowser()
-

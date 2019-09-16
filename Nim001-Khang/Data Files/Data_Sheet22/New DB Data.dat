@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>New DB Data</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>42c0849a-cce4-4cdc-9ef1-afa84d36763d</dataFileGUID>
+   <dataSourceUrl>jdbc:oracle:thin:@//132.145.123.77:1521/pdborcl.rsubnet.rvcn.oraclevcn.com</dataSourceUrl>
+   <driver>DBData</driver>
+   <isInternalPath>false</isInternalPath>
+   <password>aW1hcnRfcmZn</password>
+   <properties>
+      <entry>
+         <key>readAsString</key>
+         <value>true</value>
+      </entry>
+   </properties>
+   <query>SELECT * FROM IMFR_UT_SF_NIM001_APL002_TB1 WHERE IMFR_SD_INSERT_ID = '8fbvk13g30m5aff'</query>
+   <secureUserAccount>true</secureUserAccount>
+   <sheetName></sheetName>
+   <user>imart_rfg</user>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

@@ -12,6 +12,11 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object insert_ID
+     
+    /**
+     * <p></p>
+     */
     public static Object User
      
     /**
@@ -181,6 +186,7 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += RunConfiguration.getOverridingParameters()
     
+            insert_ID = selectedVariables['insert_ID']
             User = selectedVariables['User']
             UserAdmin = selectedVariables['UserAdmin']
             NoError = selectedVariables['NoError']

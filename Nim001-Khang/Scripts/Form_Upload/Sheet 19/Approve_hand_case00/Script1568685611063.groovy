@@ -16,7 +16,6 @@ import internal.GlobalVariable as GlobalVariable
 String Folder_Url = RunConfiguration.getProjectDir().replace('/', '\\')
 
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : '', ('Password') : ''])
-WebUI.callTestCase(findTestCase('Sub/Into_Upload_Page'), [:])
 
 WebUI.click(findTestObject('test/button'))
 

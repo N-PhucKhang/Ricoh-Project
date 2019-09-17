@@ -37,7 +37,7 @@ WebUI.switchToFrame(findTestObject('approveHand_case01/frame3'), 2)
 
 WebUI.click(findTestObject('approveHand_case01/onclick_approve2'))
 
-WebUI.click(findTestObject('approveHand_case01/onclick_ok'))   
+WebUI.click(findTestObject('approveHand_case01/onclick_ok'))
 
 WebUI.delay(2)
 

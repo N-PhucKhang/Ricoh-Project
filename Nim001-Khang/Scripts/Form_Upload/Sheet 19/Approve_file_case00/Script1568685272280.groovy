@@ -13,11 +13,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('http://132.145.113.198/imsl/login?')
+String Folder_Url = RunConfiguration.getProjectDir().replace('/', '\\')
 
-WebUI.setText(findTestObject('test/username'), 'dev09')
-
-WebUI.setText(findTestObject('test/password'), 'dev09')
+WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : '', ('Password') : ''])
 
 WebUI.click(findTestObject('test/button'))
 
@@ -60,3 +58,4 @@ if (errMsg.contains('単価適用日に祝日、休日が設定されていま�
 } else {
     WebUI.closeBrowser()
 }
+

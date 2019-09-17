@@ -11,8 +11,7 @@ String Folder_Url = RunConfiguration.getProjectDir().replace('/', '\\')
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev04', ('Password') : 'dev04'], FailureHandling.STOP_ON_FAILURE)
 WebUI.callTestCase(findTestCase('Sub/Into_Upload_Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Form_Upload/button_AddFile') 
-    )
+WebUI.click(findTestObject('Form_Upload/button_AddFile') )
 WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No2)
 WebUI.delay(1)
 WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup') , FailureHandling.STOP_ON_FAILURE 

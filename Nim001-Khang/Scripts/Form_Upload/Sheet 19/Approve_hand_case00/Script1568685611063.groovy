@@ -10,18 +10,13 @@ import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('http://132.145.113.198/imsl/login?')
+String Folder_Url = RunConfiguration.getProjectDir().replace('/', '\\')
 
-WebUI.setText(findTestObject('test/username'), 'dev09')
-
-WebUI.setText(findTestObject('test/password'), 'dev09')
-
-WebUI.click(findTestObject('test/button'))
-
-WebUI.waitForPageLoad(5)
+WebUI.callTestCase(findTestCase('Common/Login_User_Admin'), [('Username') : '', ('Password') : ''])
 
 WebUI.navigateToUrl('http://132.145.113.198/imsl/im_workflow/user/process/process_list')
 

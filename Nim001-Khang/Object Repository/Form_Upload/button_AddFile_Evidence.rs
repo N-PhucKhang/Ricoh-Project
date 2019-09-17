@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_AddFile_Evidence</name>
+   <tag></tag>
+   <elementGuidId>f9ce12c2-06d7-4467-89cf-f6f553bb3bc0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;hjjggqodybts&quot;]/table/tbody[1]/tr/th[4]/a/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;hjjggqodybts&quot;]/table/tbody[1]/tr/th[4]/a/span</value>
+   </webElementProperties>
+</WebElementEntity>

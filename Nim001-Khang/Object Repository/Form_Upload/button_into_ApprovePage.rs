@@ -7,7 +7,15 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//table[@id='unProcList']//td[@title='0000001164']//parent::tr//td[1]//a</value>
+         <value>//table[@id='unProcList']//td[@title='0000001235']//parent::tr//td[1]//a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +25,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//table[@id='unProcList']//td[@title='0000001164']//parent::tr//td[1]//a</value>
+      <value>//table[@id='unProcList']//td[@title='0000001235']//parent::tr//td[1]//a</value>
    </webElementProperties>
 </WebElementEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>17-14</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>719e6ce5-25e7-4ba1-a5e5-689a9e21fbfb</testCaseGuid>
+   <variable>
+      <defaultValue>'ddd'</defaultValue>
+      <description></description>
+      <id>92799f43-e425-4453-bdca-f25318a750a8</id>
+      <masked>false</masked>
+      <name>d</name>
+   </variable>
+</TestCaseEntity>

@@ -25,9 +25,7 @@ WebUI.waitForPageLoad(2)
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approve'))
 WebUI.delay(2)
 "Switch to Frame"
-WebUI.switchToFrame(findTestObject('Form_Upload/Frame1'), 2)
-WebUI.switchToFrame(findTestObject('Form_Upload/Frame2'), 2)
-WebUI.switchToFrame(findTestObject('Form_Upload/Frame3'), 2)
+WebUI.callTestCase(findTestCase('Sub/SwitchToFrame'), [:], FailureHandling.STOP_ON_FAILURE)
 "Click button Approval_Process"
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_Approval_Process'))
 WebUI.delay(1)

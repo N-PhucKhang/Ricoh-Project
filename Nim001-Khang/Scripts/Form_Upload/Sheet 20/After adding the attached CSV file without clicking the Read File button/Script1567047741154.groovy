@@ -11,6 +11,7 @@ String Folder_Url = RunConfiguration.getProjectDir().replace('/', '\\')
 
 //Xử lý validation check khi import (file đính kèm) do thao tác ấn button [ファイル読み込み] chưa được thực thi
 //Sau khi thêm file file CSV đính kèm mà chưa ấn button「ファイル読み込み」（bao gồm cả trường hợp xóa file và add lại file）
+
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev04', ('Password') : 'dev04'], FailureHandling.STOP_ON_FAILURE)
 WebUI.callTestCase(findTestCase('Sub/Into_Upload_Page'), [:], FailureHandling.STOP_ON_FAILURE)
 WebUI.click(findTestObject('Form_Upload/button_AddFile') // Click button add file
@@ -48,4 +49,3 @@ WebUI.verifyEqual(errMsg, '添付ファイルが編集されています。一�
     )
 WebUI.closeBrowser( // Close browser
     )
-

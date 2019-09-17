@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataFileEntity>
    <description></description>
-   <name>NotCSV</name>
+   <name>No11_2</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator></csvSeperator>
-   <dataFileGUID>ec396c94-8c90-47bd-8d2b-c3fbb16fd6f2</dataFileGUID>
-   <dataSourceUrl>Data Files/Data_Sheet22/NotCSV.xlsx</dataSourceUrl>
-   <driver>ExcelFile</driver>
+   <csvSeperator>COMMA</csvSeperator>
+   <dataFileGUID>88912094-3853-472e-ae18-a282f6dacb7e</dataFileGUID>
+   <dataSourceUrl>Data Files/Data_Sheet 23/No11-2.csv</dataSourceUrl>
+   <driver>CSV</driver>
    <isInternalPath>true</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
-   <sheetName>Sheet1</sheetName>
+   <sheetName></sheetName>
    <usingGlobalDBSetting>false</usingGlobalDBSetting>
 </DataFileEntity>

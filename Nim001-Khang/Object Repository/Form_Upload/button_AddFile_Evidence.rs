@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_AddFile1</name>
+   <name>button_AddFile_Evidence</name>
    <tag></tag>
    <elementGuidId>f9ce12c2-06d7-4467-89cf-f6f553bb3bc0</elementGuidId>
    <selectorCollection>

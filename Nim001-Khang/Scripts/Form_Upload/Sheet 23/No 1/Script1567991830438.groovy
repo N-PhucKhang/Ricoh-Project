@@ -27,4 +27,3 @@ WebUI.verifyEqual(errMsg, 'CSVファイルが登録されていません' // Ver
     )
 WebUI.closeBrowser( // Close browser
     )
-

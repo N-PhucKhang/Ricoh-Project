@@ -16,7 +16,7 @@ for (int i = 2; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(1)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No3 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -28,7 +28,7 @@ for (int i = 2; i <= totalFile; i++) {
     WebUI.switchToWindowIndex(1)
     WebUI.maximizeWindow()
     WebUI.waitForPageLoad(2)
-    WebUI.verifyTextPresent('上流システムコード、請求売上先サイトID、取引先コード を設定してください', false)
+    WebUI.verifyTextPresent('上流システムコード、請求売上先サイトID、取引先コード を設定してください', false, FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.closeWindowIndex(1)
     WebUI.switchToWindowIndex(0)
     WebUI.delay(2)

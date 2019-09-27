@@ -17,7 +17,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(2)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No13 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -32,8 +32,8 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.takeScreenshot(('D:\\KatalonScreenShot\\Sheet23\\No13-' + i) + '.png' // Take screen shot
         )
     WebUI.delay(2)
-    WebUI.verifyTextPresent('適用日が混在（ 20200501）しています。適用日が異なる場合は別申請としてください', false)
-    WebUI.verifyTextPresent('適用日が混在（ 20200502）しています。適用日が異なる場合は別申請としてください', false)
+    WebUI.verifyTextPresent('適用日が混在（ 20200501）しています。適用日が異なる場合は別申請としてください', false, FailureHandling.CONTINUE_ON_FAILURE)
+    WebUI.verifyTextPresent('適用日が混在（ 20200502）しています。適用日が異なる場合は別申請としてください', false, FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.closeWindowIndex(1)
     WebUI.switchToWindowIndex(0)
     WebUI.delay(2)

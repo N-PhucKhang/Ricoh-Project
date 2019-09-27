@@ -31,7 +31,7 @@ for (int i = 2; i <= updatekubun; i++) {
 	WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
 	WebUI.delay(2)
 	errMsg1 = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-	WebUI.verifyMatch(errMsg1, '処理に失敗しました。 MoM顧客別単価マスタに登録されていないコードが設定されています。差戻してください。', true, FailureHandling.STOP_ON_FAILURE)
+	WebUI.verifyMatch(errMsg1, '処理に失敗しました。 MoM顧客別単価マスタに登録されていないコードが設定されています。差戻してください。', true, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.delay(2)
 	WebUI.click(findTestObject('Object Repository/Form_Upload/button_ClosePopup'))
 	WebUI.delay(2)

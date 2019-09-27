@@ -16,7 +16,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(1)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No4 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -30,7 +30,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.maximizeWindow()
     WebUI.delay(2)
 	
-	WebUI.verifyTextPresent('上流システムコード、請求売上先サイトID、取引先コード 混在です', false, FailureHandling.STOP_ON_FAILURE)
+	WebUI.verifyTextPresent('上流システムコード、請求売上先サイトID、取引先コード 混在です', false, FailureHandling.CONTINUE_ON_FAILURE)
 	
     //MsgErr = WebUI.getText(findTestObject('Object Repository/Form_Upload/check_Text1'))
     //WebUI.verifyEqual(MsgErr, '上流システムコード、請求売上先サイトID、取引先コード 混在です')

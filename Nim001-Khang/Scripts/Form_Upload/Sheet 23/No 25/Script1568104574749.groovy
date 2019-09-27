@@ -17,7 +17,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(2)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No25 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -31,7 +31,7 @@ for (int i = 1; i <= totalFile; i++) {
     MsgErr1 = WebUI.getText(findTestObject('Form_Upload/check_Text1'))
     WebUI.verifyEqual(MsgErr1, '上流システムコード、商品コードが重複しています')
     MsgErr2 = WebUI.getText(findTestObject('Form_Upload/check_Text2'))
-    WebUI.verifyEqual(MsgErr2, '上流システムコード、商品コードが重複しています')
+    WebUI.verifyEqual(MsgErr2, '上流システムコード、商品コードが重複しています', FailureHandling.CONTINUE_ON_FAILURE)
     //WebUI.verifyTextPresent("上流システムコード、商品コードが重複しています", false)
     WebUI.closeWindowIndex(1)
     WebUI.switchToWindowIndex(0)

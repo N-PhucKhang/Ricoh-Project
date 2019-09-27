@@ -19,7 +19,7 @@
    <testCaseLink>
       <guid>aaa9246d-3166-4d84-bf36-1fa00e86629b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Form_Upload/Sheet 20/Apply Successfully</testCaseId>
    </testCaseLink>
    <testCaseLink>

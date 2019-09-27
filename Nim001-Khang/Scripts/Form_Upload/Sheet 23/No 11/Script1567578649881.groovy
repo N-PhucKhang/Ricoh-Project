@@ -17,7 +17,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(2)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No11 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -29,10 +29,8 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.maximizeWindow()
     WebUI.waitForPageLoad(2)
     WebUI.maximizeWindow()
-    WebUI.takeScreenshot(('D:\\KatalonScreenShot\\Sheet23\\No11-' + i) + '.png' // Take screen shot
-        )
-    WebUI.delay(2)
-    WebUI.verifyTextPresent('適用開始日に有効な日付を設定してください', false)
+	WebUI.delay(1)
+    WebUI.verifyTextPresent('適用開始日に有効な日付を設定してください', false, FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.closeWindowIndex(1)
     WebUI.switchToWindowIndex(0)
     WebUI.delay(2)

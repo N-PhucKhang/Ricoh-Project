@@ -17,7 +17,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.click(findTestObject('Form_Upload/button_AddFile'))
     WebUI.delay(2)
     WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No32 + 
-        i + '.csv')
+        i + '.csv', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup'))
     WebUI.delay(2)
@@ -29,7 +29,7 @@ for (int i = 1; i <= totalFile; i++) {
     WebUI.waitForPageLoad(2)
     WebUI.maximizeWindow()
     MsgErr1 = WebUI.getText(findTestObject('Form_Upload/check_Text1'))
-    WebUI.verifyEqual(MsgErr1, '原価振替コードに不正な値が設定されています')
+    WebUI.verifyEqual(MsgErr1, '原価振替コードに不正な値が設定されています', FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.closeWindowIndex(1)
     WebUI.switchToWindowIndex(0)
     WebUI.delay(2)

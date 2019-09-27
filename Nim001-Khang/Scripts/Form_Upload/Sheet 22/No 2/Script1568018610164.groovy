@@ -32,7 +32,7 @@ for (int i = 1; i <= updatekubun; i++) {
     WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
     WebUI.delay(2)
     errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-    WebUI.verifyMatch(errMsg, '処理に失敗しました。 上流システムコードに登録されていないコードが設定されています。差戻してください。', true, FailureHandling.STOP_ON_FAILURE)
+    WebUI.verifyMatch(errMsg, '処理に失敗しました。 上流システムコードに登録されていないコードが設定されています。差戻してください。', true, FailureHandling.CONTINUE_ON_FAILURE)
     WebUI.delay(2)
     WebUI.click(findTestObject('Object Repository/Form_Upload/button_ClosePopup'))
     WebUI.delay(2)

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>testgg</name>
+   <tag></tag>
+   <elementGuidId>cb27c378-4c47-42ef-b4cd-0c057ada9633</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;tsf&quot;]/div[2]/div[1]/div[1]/div/div[2]/input</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;tsf&quot;]/div[2]/div[1]/div[1]/div/div[2]/input</value>
+   </webElementProperties>
+</WebElementEntity>

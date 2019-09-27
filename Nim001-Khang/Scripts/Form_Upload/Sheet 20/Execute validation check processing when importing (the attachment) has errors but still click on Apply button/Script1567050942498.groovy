@@ -14,7 +14,7 @@ WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'de
 WebUI.callTestCase(findTestCase('Sub/Into_Upload_Page'), [:], FailureHandling.STOP_ON_FAILURE)
 WebUI.click(findTestObject('Form_Upload/button_AddFile') // Click button add file
     )
-WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No2 // Up file error.csv
+WebUI.setText(findTestObject('Form_Upload/button_AddFile_Popup'), Folder_Url + GlobalVariable.No2 , FailureHandling.CONTINUE_ON_FAILURE// Up file error.csv
     )
 WebUI.waitForPageLoad(2)
 WebUI.click(findTestObject('Form_Upload/button_UpFile_Popup') // Click button upload file in popup page
@@ -27,7 +27,7 @@ WebUI.click(findTestObject('Form_Upload/button_Apply') // Click button Apply
     )
 errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg') // Get error message
     )
-WebUI.verifyEqual(errMsg, '読み込み結果確認ボタンを押してCSVファイルチェックを行い、エラーを再確認してください。' // Verify error message
+WebUI.verifyEqual(errMsg, '読み込み結果確認ボタンを押してCSVファイルチェックを行い、エラーを再確認してください。', FailureHandling.CONTINUE_ON_FAILURE // Verify error message
     )
 WebUI.closeBrowser()
 

@@ -33,7 +33,7 @@ WebUI.delay(1)
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
 'Verify Error Msg'
 errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-WebUI.verifyMatch(errMsg, '処理に失敗しました。 商品コードに登録されていないコードが設定されています。差戻してください。', false)
+WebUI.verifyMatch(errMsg, '処理に失敗しました。 商品コードに登録されていないコードが設定されています。差戻してください。', false, FailureHandling.CONTINUE_ON_FAILURE)
 'Close browse'
 WebUI.closeBrowser()
 

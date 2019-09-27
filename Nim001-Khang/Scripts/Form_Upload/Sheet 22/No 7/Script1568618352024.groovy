@@ -32,7 +32,7 @@ WebUI.delay(1)
 WebUI.click(findTestObject('Object Repository/Form_Upload/button_ApplyPopup'))
 "Verify Error Msg"
 errMsg = WebUI.getText(findTestObject('Object Repository/Form_Upload/label_errMsg_Approve'))
-WebUI.verifyMatch(errMsg, '処理に失敗しました。 統一仕切未満です。差戻してください。', false)
+WebUI.verifyMatch(errMsg, '処理に失敗しました。 統一仕切未満です。差戻してください。', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 def recordset3 = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SS_AP0033_APL000 set IMFR_UD_TOITSU_SIKIRI_KAKAKU  = \'\' where IMFR_SD_INSERT_ID = \'10\'')
 def recordset4 = CustomKeywords.'com.database.connectSql.executeQuery'('update IMFR_UT_SF_NIM001_APL002_TB1 set IMFR_UD_TB1_SHIN_TANKA  = \'\' where IMFR_SD_INSERT_ID =' + '\'' + GlobalVariable.insert_ID + '\'')

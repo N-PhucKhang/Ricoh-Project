@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Login</name>
+   <name>select_bt</name>
    <tag></tag>
-   <elementGuidId>0185b6d7-3eb3-406a-85bf-b7a2eab3007c</elementGuidId>
+   <elementGuidId>c5e2ea77-8cff-4ae1-a57c-84d41382f817</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
+      <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

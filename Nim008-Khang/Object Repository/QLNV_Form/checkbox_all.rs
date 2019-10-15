@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Login</name>
+   <name>checkbox_all</name>
    <tag></tag>
-   <elementGuidId>0185b6d7-3eb3-406a-85bf-b7a2eab3007c</elementGuidId>
+   <elementGuidId>a4a9a2ce-f923-4fd5-b27c-8d750e0afa81</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>//*[@id=&quot;cb_gt13&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
+      <value>//*[@id=&quot;cb_gt13&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

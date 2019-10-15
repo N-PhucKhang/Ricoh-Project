@@ -19,13 +19,19 @@ WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_applic
 
 WebUI.waitForPageLoad(3)
 
-WebUI.click(findTestObject('QLNV_Form/Tab_2'))
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_6'))
+
+WebUI.waitForPageLoad(3)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_Tab3_Clear_Selected_Document'))
+WebUI.click(findTestObject('QLNV_Form/Tab6/button_Tab6_Edit_Line1'))
 
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
-WebUI.verifyMatch(errMsg , "対象がありません。消込対象をチェックしてください。", true, FailureHandling.STOP_ON_FAILURE)
+WebUI.switchToWindowUrl("http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl002?gt8_sec=&subform=8")
+WebUI.maximizeWindow()
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Admin_Form/button_To_Mails'), 0, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()

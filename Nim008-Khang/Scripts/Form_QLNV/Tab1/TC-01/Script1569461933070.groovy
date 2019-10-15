@@ -10,9 +10,9 @@ WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_applic
 
 WebUI.waitForPageLoad(3)
 
-WebUI.click(findTestObject('QLNV_Form/button_QA'))
+WebUI.click(findTestObject('QLNV_Form/Tab1/button_QA'))
 
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
 
 WebUI.verifyEqual(errMsg, "チェックをしてください。")
 

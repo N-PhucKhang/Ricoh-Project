@@ -14,7 +14,7 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/Admin_Form/button_Save'))
 
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
 
 WebUI.verifyEqual(errMsg , "販社コードと販社名はかならず入力してください。")
 

@@ -19,19 +19,21 @@ WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_applic
 
 WebUI.waitForPageLoad(3)
 
-WebUI.delay(2)
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_2'))
 
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_6'))
+WebUI.delay(3)
 
-WebUI.waitForPageLoad(3)
+WebUI.click(findTestObject('QLNV_Form/Tab1/button_Edit_Line1'))
 
-WebUI.delay(2)
-
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_Tab6_Edit_Line1'))
-
-WebUI.switchToWindowUrl("http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl002?gt8_sec=&subform=8")
+WebUI.switchToWindowUrl("http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001")
 WebUI.maximizeWindow()
+WebUI.click(findTestObject('button_QA_Popup'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Admin_Form/button_To_Mails'), 0, FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('button_QA_Popup'))
+WebUI.click(findTestObject('button_QA_Popup'))
+
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
+
+WebUI.verifyMatch(errMsg , "既に問い合わせ登録画面が開いています。保存又は画面を閉じた後、.*新しい登録を行ってください", true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()

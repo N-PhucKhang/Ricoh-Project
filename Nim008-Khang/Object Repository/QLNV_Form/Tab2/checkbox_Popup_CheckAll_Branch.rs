@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Line1</name>
+   <name>checkbox_Popup_CheckAll_Branch</name>
    <tag></tag>
-   <elementGuidId>64a58aa0-09be-46b2-86f0-9aabfb7d4b97</elementGuidId>
+   <elementGuidId>b3af94c0-ba26-47d8-b9c3-01b5fdac9e33</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+         <value>//*[@id=&quot;cb_gt10&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+      <value>//*[@id=&quot;cb_gt10&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

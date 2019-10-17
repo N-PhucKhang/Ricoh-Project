@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Line1</name>
+   <name>textbox_Sum_Uncollect</name>
    <tag></tag>
-   <elementGuidId>64a58aa0-09be-46b2-86f0-9aabfb7d4b97</elementGuidId>
+   <elementGuidId>cd6ef877-faa3-4e86-ab81-023114390b4e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+         <value>//*[@id=&quot;olrtgbiqiwff&quot;]/input[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+      <value>//*[@id=&quot;olrtgbiqiwff&quot;]/input[2]</value>
    </webElementProperties>
 </WebElementEntity>

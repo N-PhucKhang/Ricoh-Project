@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Line1</name>
+   <name>button_Popup_Choose_Sale_Comp</name>
    <tag></tag>
-   <elementGuidId>64a58aa0-09be-46b2-86f0-9aabfb7d4b97</elementGuidId>
+   <elementGuidId>4abb5e1f-4eb7-46a6-b4b8-4ef86a2c7472</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+         <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gt1_2&quot;]</value>
+      <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

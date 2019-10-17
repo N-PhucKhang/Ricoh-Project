@@ -18,5 +18,3 @@ WebUI.setText(findTestObject('Login/textbox_Password'), 'dev40')
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(2)
-
-//WebUI.navigateToUrl('http://132.145.113.198/imsl/menu/sitemap', FailureHandling.STOP_ON_FAILURE)

@@ -21,11 +21,11 @@ WebUI.waitForPageLoad(3)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_3'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_4'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('QLNV_Form/Tab3/button_Tab3_Clear_Selected_Document'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab4/button_Cancellation'))
 
 errMsg = WebUI.getText(findTestObject('label_errMsg'))
 WebUI.verifyMatch(errMsg , "対象がありません。チェックをしてください。", true, FailureHandling.STOP_ON_FAILURE)

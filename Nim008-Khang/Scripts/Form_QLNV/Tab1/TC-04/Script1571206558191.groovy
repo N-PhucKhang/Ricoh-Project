@@ -41,8 +41,8 @@ println ("SumUncollect: " + SumUncollect)
 SumOverpay = WebUI.getAttribute(findTestObject('Object Repository/QLNV_Form/Tab1/textbox_Sum_Overpay'), "value")
 println ("SumOverpay: " + SumOverpay)
 
-WebUI.verifyEqual(Integer.parseInt(SumUncollect), DBSumUncollect[0][0])
-WebUI.verifyEqual(Integer.parseInt(SumOverpay), DBSumOverpay[0][0])
+WebUI.verifyEqual(SumUncollect, DBSumUncollect[0][0])
+WebUI.verifyEqual(SumOverpay, DBSumOverpay[0][0])
 
 WebUI.closeBrowser()
 

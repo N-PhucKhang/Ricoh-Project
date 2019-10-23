@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Line1</name>
+   <name>button_CancellClearance</name>
    <tag></tag>
-   <elementGuidId>64a58aa0-09be-46b2-86f0-9aabfb7d4b97</elementGuidId>
+   <elementGuidId>642f3e32-4c78-4183-9d23-267a4fafee8a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gt1_1&quot;]</value>
+         <value>//*[@id=&quot;eventButton_akbtbbiclqwc&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gt1_1&quot;]</value>
+      <value>//*[@id=&quot;eventButton_akbtbbiclqwc&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

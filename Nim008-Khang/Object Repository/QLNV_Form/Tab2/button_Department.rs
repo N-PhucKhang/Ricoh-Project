@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;nextButton_ovacbjxhdeer&quot;]</value>
+         <value>//input[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;nextButton_ovacbjxhdeer&quot;]</value>
+      <value>//input[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Line1</name>
+   <name>button_Tab2_Download_Data_Clear</name>
    <tag></tag>
-   <elementGuidId>64a58aa0-09be-46b2-86f0-9aabfb7d4b97</elementGuidId>
+   <elementGuidId>774cbe0c-a7b9-405a-902b-f58aa73dc96d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gt1_1&quot;]</value>
+         <value>//*[@id=&quot;eventButton_ctehuqohkxbu&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gt1_1&quot;]</value>
+      <value>//*[@id=&quot;eventButton_ctehuqohkxbu&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

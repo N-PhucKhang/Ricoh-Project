@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_ShowErrMsgWhenClick_2TimeButtonQA_Popup</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e93ddf0b-c7e4-46c0-8c52-8e40d87d534e</testCaseGuid>
+</TestCaseEntity>

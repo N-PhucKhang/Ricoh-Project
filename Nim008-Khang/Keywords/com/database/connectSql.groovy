@@ -3,6 +3,7 @@ package com.database
 import java.sql.Connection;
 import java.sql.DriverManager
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData
 import java.sql.Statement;
 
 import com.kms.katalon.core.annotation.Keyword
@@ -26,14 +27,44 @@ public class connectSql {
 		return connection
 	}
 
-
+	/*
+	 @Keyword
+	 def executeQuery(String queryString) {
+	 Statement stm = connection.createStatement()
+	 ResultSet rs = stm.executeQuery(queryString)
+	 return rs
+	 }
+	 */
 	@Keyword
 	def executeQuery(String queryString) {
 		Statement stm = connection.createStatement()
 
-		ResultSet rs = stm.executeQuery(queryString)
+		ResultSet resultSet = stm.executeQuery(queryString)
 
-		return rs
+		ResultSetMetaData metadata = resultSet.getMetaData()
+		int columnCount = metadata.getColumnCount()
+		List<List<String>> rowList = new LinkedList<List<String>>()
+
+		while (resultSet.next()) {
+
+			List<String> row = new LinkedList<>()
+
+			for(int i = 1; i <=columnCount; i++) {
+				Object value = resultSet.getObject(i)
+				row.add(value)
+			}
+			//System.out.println(row)
+			rowList.add(row)
+		}
+
+		for(List<String> row: rowList) {
+			for(String data: row) {
+				System.out.print(data + " ")
+			}
+			System.out.println()
+		}
+
+		return rowList
 	}
 
 	@Keyword

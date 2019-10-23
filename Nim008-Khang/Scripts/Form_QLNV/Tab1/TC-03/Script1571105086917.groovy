@@ -22,4 +22,3 @@ errMsg = WebUI.getText(findTestObject('label_errMsg'))
 WebUI.verifyMatch(errMsg , "既に問い合わせ登録画面が開いています。保存又は画面を閉じた後、.*新しい登録を行ってください", true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
-

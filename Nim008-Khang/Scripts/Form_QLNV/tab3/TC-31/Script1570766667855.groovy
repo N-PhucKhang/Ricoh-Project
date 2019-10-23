@@ -39,10 +39,10 @@ colum2_num = WebUI.getText(findTestObject('QLNV_Form/colum2_num'))
 
 colum4_num = WebUI.getText(findTestObject('QLNV_Form/colum4_num'))
 
-WebUI.verifyMatch(product_count, '61', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum3_num, '15,442', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum2_num, '376,478', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum4_num, '371,755', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch(product_count, '60', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch(colum3_num, '121,009', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch(colum2_num, '4,725,365,295', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch(colum4_num, '365,297', true, FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.closeBrowser()

@@ -19,21 +19,13 @@ WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_applic
 
 WebUI.waitForPageLoad(3)
 
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_2'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_3'))
 
-WebUI.delay(3)
+WebUI.delay(2)
 
-WebUI.click(findTestObject('QLNV_Form/button_Edit_Line1'))
+WebUI.click(findTestObject('QLNV_Form/Tab3/button_Tab3_Clear_Selected_Document'))
 
-WebUI.switchToWindowUrl("http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001")
-WebUI.maximizeWindow()
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_QA_Popup'))
-
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_QA_Popup'))
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_QA_Popup'))
-
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
-
-WebUI.verifyMatch(errMsg , "既に問い合わせ登録画面が開いています。保存又は画面を閉じた後、.*新しい登録を行ってください", true, FailureHandling.STOP_ON_FAILURE)
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
+WebUI.verifyMatch(errMsg , "対象がありません。消込対象をチェックしてください。", true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()

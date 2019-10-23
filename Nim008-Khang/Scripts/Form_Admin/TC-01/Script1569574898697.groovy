@@ -16,7 +16,7 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('Object Repository/Admin_Form/button_Tab2_Download_Captured_Data'))
 
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
 
 WebUI.verifyEqual(errMsg , "対象がありません。チェックをしてください。")
 

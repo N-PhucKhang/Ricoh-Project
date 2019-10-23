@@ -14,9 +14,9 @@ WebUI.click(findTestObject('QLNV_Form/Tab_2'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/QLNV_Form/button_Tab2_ClearSelected_Document'))
+WebUI.click(findTestObject('QLNV_Form/Tab2/button_Tab2_ClearSelected_Document'))
 
-errMsg = WebUI.getText(findTestObject('QLNV_Form/label_errMsg'))
+errMsg = WebUI.getText(findTestObject('label_errMsg'))
 WebUI.verifyMatch(errMsg , "対象がありません。消込対象をチェックしてください。", true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()

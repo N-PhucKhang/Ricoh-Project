@@ -16,7 +16,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.c
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_QLNV\\Tab2\\DataSurvey_when_click_btn_sales_com\\20191024_140611\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_QLNV\\Tab2\\DataSurvey_when_click_btn_sales_com\\20191024_155749\\execution.properties')
 
 TestCaseMain.beforeStart()
 

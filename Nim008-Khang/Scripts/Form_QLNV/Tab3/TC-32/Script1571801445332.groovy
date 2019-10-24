@@ -31,19 +31,24 @@ WebUI.click(findTestObject('QLNV_Form/select_bt'))
 
 WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
 
-product_count = WebUI.getText(findTestObject('QLNV_Form/product_count'))
+WebUI.click(findTestObject('QLNV_Form/Tab3/check_box'))
 
-colum3_num = WebUI.getText(findTestObject('QLNV_Form/colum3_num'))
+WebUI.click(findTestObject('QLNV_Form/Tab3/clear_button'))
 
-colum2_num = WebUI.getText(findTestObject('QLNV_Form/colum2_num'))
+hdd_insertId = WebUI.getAttribute(findTestObject('QLNV_Form/Tab3/hdd_insert_idd'), 'title')
 
-colum4_num = WebUI.getText(findTestObject('QLNV_Form/colum4_num'))
+CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com',
+	'log_search_user', 'Log_seaRch_uSer', "imart_rfg")
+String sql = "SELECT IMFR_UD_CLEARED_FLAG FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_SD_INSERT_ID = " + hdd_insertId
 
-WebUI.verifyMatch(product_count, '60', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum3_num, '121,009', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum2_num, '4,725,365,295', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum4_num, '365,297', true, FailureHandling.STOP_ON_FAILURE)
+println (sql)
 
+def DBClearedFlag = CustomKeywords.'com.database.connectSql.executeQuery'(sql)
 
-WebUI.closeBrowser()
+println ("CheckCombinationKey: " + DBClearedFlag)
+
+CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
+
+WebUI.verifyMatch(DBClearedFlag[0][0], '1', true, FailureHandling.STOP_ON_FAILURE)
+
 

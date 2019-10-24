@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Tab6_Edit_Line1</name>
+   <name>input_paper_no</name>
    <tag></tag>
-   <elementGuidId>df5df1b7-d9b6-42d3-a2ae-966683cec498</elementGuidId>
+   <elementGuidId>43862c59-3e4c-4665-8369-76e013d51111</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;2&quot;]/td[2]/img</value>
+         <value>//*[@id=&quot;xxyqulcfmtns&quot;]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;2&quot;]/td[2]/img</value>
+      <value>//*[@id=&quot;xxyqulcfmtns&quot;]/input</value>
    </webElementProperties>
 </WebElementEntity>

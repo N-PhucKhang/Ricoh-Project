@@ -40,12 +40,12 @@ println('----- END SELECT SALES COM -----')
 WebUI.delay(2)
 
 "Get hidden sales com selected values"
-println('----- GET SELECT SALES COM -----')
+println('----- GET HIDDEN SELECT SALES COM VALUES -----')
 WebUI.switchToWindowIndex(0)
 hidden_sales_com_values = WebUI.getAttribute(findTestObject('Object Repository/QLNV_Form/Tab2/hidden_sales_com'), "value")
 println("hidden sales com: " + hidden_sales_com_values)
 WebUI.delay(2)
-println('----- END GET SELECT SALES COM -----')
+println('----- END GET HIDDEN SELECT SALES COM VALUES -----')
 
 "Convert input values"
 println('----- CONVERT INPUT VALUES -----')
@@ -84,3 +84,10 @@ println('Summaries values from DB: ' + sales_com_summary_list.get(0).get(0)
 	+ ' ' + sales_com_summary_list.get(0).get(4)
 )
 println('----- END GET SALES COM SUMMARIES FROM DB -----')
+
+println('----- GET DATAS GRID TABLE DETAIL -----')
+def s  = 'return $("#gt3").jqGrid("getRowData")'
+def gt_detail_datas = WebUI.executeJavaScript(s.toString(), null);
+println(gt_detail_datas)
+println('----- END GET DATAS GRID TABLE DETAIL -----')
+

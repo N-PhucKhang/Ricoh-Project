@@ -2,6 +2,8 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://132.145.113.198/imsl/login', FailureHandling.STOP_ON_FAILURE)
@@ -10,14 +12,10 @@ WebUI.maximizeWindow()
 
 WebUI.clearText(findTestObject('Login/textbox_Username'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Login/textbox_Username'), 'dev09')
+WebUI.setText(findTestObject('Login/textbox_Username'), 'dev04')
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev09')
+WebUI.setText(findTestObject('Login/textbox_Password'), 'dev40')
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(2)
-<<<<<<< HEAD
-
-=======
->>>>>>> 702afab4c24008f4297d592e0430cdf2b55326a6

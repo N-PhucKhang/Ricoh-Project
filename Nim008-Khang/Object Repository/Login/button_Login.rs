@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
+         <value>//input[@value=&quot;ログイン&quot;]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -20,6 +20,13 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;imui-gcf-container&quot;]/div/div/form/div/div[2]/div[3]/input</value>
+      <value>//input[@value=&quot;ログイン&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>imui-btn-login</value>
    </webElementProperties>
 </WebElementEntity>

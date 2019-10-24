@@ -10,20 +10,12 @@ WebUI.maximizeWindow()
 
 WebUI.clearText(findTestObject('Login/textbox_Username'), FailureHandling.STOP_ON_FAILURE)
 
-<<<<<<< HEAD
 WebUI.setText(findTestObject('Login/textbox_Username'), 'dev06')
 
 WebUI.setText(findTestObject('Login/textbox_Password'), 'dev06')
-=======
-WebUI.setText(findTestObject('Login/textbox_Username'), 'dev04')
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev04')
->>>>>>> a58997ba17f1cad3a6a1e7fbe1d8a1c7ef39182c
+
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(2)
-<<<<<<< HEAD
-
-=======
->>>>>>> a58997ba17f1cad3a6a1e7fbe1d8a1c7ef39182c

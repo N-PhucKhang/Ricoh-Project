@@ -49,3 +49,12 @@ WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？
 
 WebUI.click(findTestObject('save_close_button'))
 
+CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
+    'Log_seaRch_uSer', 'imart_rfg')
+
+def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_UD_TO = \'nghia@pasona.com\' AND IMFR_SD_CREATE_DATE = (SELECT MAX(IMFR_SD_CREATE_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
+
+WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+
+WebUI.closeBrowser()
+

@@ -42,3 +42,11 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('save_close_button'))
 
+CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user',
+	'Log_seaRch_uSer', 'imart_rfg')
+
+def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_SD_RECORD_USER_CD=\'' + GlobalVariable.user +  '\' AND IMFR_SD_RECORD_DATE = (SELECT MAX(IMFR_SD_RECORD_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
+
+WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+WebUI.closeBrowser()
+

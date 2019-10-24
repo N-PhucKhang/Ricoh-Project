@@ -38,6 +38,12 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
+def static "com.helper.js.ConvertStringToArrayChar.convert"(
+    	String string	) {
+    (new com.helper.js.ConvertStringToArrayChar()).convert(
+        	string)
+}
+
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
 }

@@ -13,37 +13,39 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev04', ('Password') : 'dev04'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common/Login_user'), [('Password') : 'dev06', ('Username') : 'dev06'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(6)
+WebUI.waitForPageLoad(3)
 
-WebUI.click(findTestObject('QLNV_Form/Tab_3'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('QLNV_Form/produc_button'))
+WebUI.click(findTestObject('sale_comp_button'))
+
+WebUI.waitForPageLoad(3)
+
+WebUI.delay(2)
 
 WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001')
 
-WebUI.click(findTestObject('QLNV_Form/checkbox_all'))
+WebUI.click(findTestObject('sale_value_equal_26'))
 
-WebUI.click(findTestObject('QLNV_Form/select_bt'))
+WebUI.click(findTestObject('choice_button'))
 
 WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
 
-product_count = WebUI.getText(findTestObject('QLNV_Form/product_count'))
+WebUI.check(findTestObject('salecom_checkbox'))
 
-colum3_num = WebUI.getText(findTestObject('QLNV_Form/colum3_num'))
+WebUI.click(findTestObject('QA_button'))
 
-colum2_num = WebUI.getText(findTestObject('QLNV_Form/colum2_num'))
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_application_view/sf_nim008_apl002?imui-theme-builder-module=headwithcontainer')
 
-colum4_num = WebUI.getText(findTestObject('QLNV_Form/colum4_num'))
+WebUI.check(findTestObject('qa_div_1_checkbox'))
 
-WebUI.verifyMatch(product_count, '60', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum3_num, '121,009', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum2_num, '4,725,365,295', true, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyMatch(colum4_num, '365,297', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('to_textbox'), 'nghia@pasona.com')
 
+WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？')
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('save_close_button'))
 

@@ -3,10 +3,16 @@
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
  */
 
-import java.sql.Connection
-
 import java.lang.String
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 import com.katalon.plugin.keyword.connection.DBType
 
 import java.sql.ResultSet
@@ -81,6 +87,10 @@ def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingInt
          , 	port
          , 	dbName)
 }
+>>>>>>> 4022b07014022774af584fbac8804b1deafd2fbf
+>>>>>>> 3b3c583831b365798ebc184a58ccf387974a42be
+>>>>>>> a58997ba17f1cad3a6a1e7fbe1d8a1c7ef39182c
+>>>>>>> 61c7a72b37a9bbcb84044e4f3aa893040316381b
 
 def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingGlobalConnection"(
     	String fileName	
@@ -122,10 +132,29 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
+<<<<<<< HEAD
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getRowCount"(
     	ResultSet rs	) {
     (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getRowCount(
         	rs)
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListRowValue"(
+    	ResultSet rs	
+     , 	int fromRowIndex	
+     , 	int toRowIndex	) {
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getListRowValue(
+        	rs
+         , 	fromRowIndex
+         , 	toRowIndex)
+>>>>>>> 88b9425ba07835e76a5a8e740658b40bd7f02919
 }
 
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getColumnCount"(
@@ -208,6 +237,10 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.exportToCSV"
          , 	pathFile)
 }
 
+>>>>>>> 4022b07014022774af584fbac8804b1deafd2fbf
+>>>>>>> 3b3c583831b365798ebc184a58ccf387974a42be
+>>>>>>> a58997ba17f1cad3a6a1e7fbe1d8a1c7ef39182c
+>>>>>>> 61c7a72b37a9bbcb84044e4f3aa893040316381b
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
 }

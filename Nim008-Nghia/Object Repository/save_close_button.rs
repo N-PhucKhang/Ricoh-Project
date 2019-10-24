@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>save_close_button</name>
+   <tag></tag>
+   <elementGuidId>794afccb-a14d-4201-9a1e-1218becb4f8d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;imui-container&quot;]/div[2]/div/ul[1]/li[2]/a/span/font</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;imui-container&quot;]/div[2]/div/ul[1]/li[2]/a/span/font</value>
+   </webElementProperties>
+</WebElementEntity>

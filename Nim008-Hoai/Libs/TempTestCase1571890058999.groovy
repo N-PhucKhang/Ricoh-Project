@@ -16,9 +16,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.c
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Common\\Login_User_Normal\\20191024_102531\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_QA\\CheckDataInGridview\\20191024_110738\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Common/Login_User_Normal', new TestCaseBinding('Test Cases/Common/Login_User_Normal',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Form_QA/CheckDataInGridview', new TestCaseBinding('Test Cases/Form_QA/CheckDataInGridview',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

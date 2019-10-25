@@ -5,6 +5,8 @@
 
 import java.lang.String
 
+import java.util.LinkedList
+
 
 def static "com.database.connectSql.connectDB"(
     	String server	
@@ -40,4 +42,34 @@ def static "com.database.connectSql.execute"(
 
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
+}
+
+def static "com.helpers.Tab2Helpers.convert"(
+    	String string	) {
+    (new com.helpers.Tab2Helpers()).convert(
+        	string)
+}
+
+def static "com.helpers.Tab2Helpers.countItems"(
+    	java.util.LinkedList<String[]> array	) {
+    (new com.helpers.Tab2Helpers()).countItems(
+        	array)
+}
+
+def static "com.helpers.Tab2Helpers.getUncollectedTotal"(
+    	java.util.LinkedList<String[]> array	) {
+    (new com.helpers.Tab2Helpers()).getUncollectedTotal(
+        	array)
+}
+
+def static "com.helpers.Tab2Helpers.getOverpaymentTotal"(
+    	java.util.LinkedList<String[]> array	) {
+    (new com.helpers.Tab2Helpers()).getOverpaymentTotal(
+        	array)
+}
+
+def static "com.helpers.Tab2Helpers.getAmountOfMoneyTotal"(
+    	java.util.LinkedList<String[]> array	) {
+    (new com.helpers.Tab2Helpers()).getAmountOfMoneyTotal(
+        	array)
 }

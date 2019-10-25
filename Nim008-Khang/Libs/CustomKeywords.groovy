@@ -7,6 +7,8 @@ import java.sql.Connection
 
 import java.lang.String
 
+<<<<<<< HEAD
+=======
 import com.katalon.plugin.keyword.connection.DBType
 
 import java.sql.ResultSet
@@ -90,6 +92,18 @@ def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingInt
          , 	dbName)
 }
 
+<<<<<<< HEAD
+=======
+def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingGlobalConnection"(
+    	String fileName	
+     , 	String query	) {
+    (new com.katalon.plugin.keyword.generator.DataFileKeywords()).createUsingGlobalConnection(
+        	fileName
+         , 	query)
+}
+>>>>>>> df1d727fc9461963b12ad4abb59f274f6f44e6c6
+
+>>>>>>> 397644d2c53a5f506c88884ec244ca680ff41db6
 def static "com.database.connectSql.connectDB"(
     	String server	
      , 	String port	
@@ -122,6 +136,7 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
+<<<<<<< HEAD
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getRowCount"(
     	ResultSet rs	) {
     (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getRowCount(
@@ -135,6 +150,11 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getColumnCou
 }
 
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getSingleRowValue"(
+=======
+<<<<<<< HEAD
+=======
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListCellValue"(
+>>>>>>> 397644d2c53a5f506c88884ec244ca680ff41db6
     	ResultSet rs	
      , 	int rowIndex	) {
     (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getSingleRowValue(
@@ -208,6 +228,7 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListRowVa
          , 	toRowIndex)
 }
 
+>>>>>>> df1d727fc9461963b12ad4abb59f274f6f44e6c6
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
 }

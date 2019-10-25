@@ -16,8 +16,4 @@ WebUI.setText(findTestObject('Login/textbox_Password'), 'dev09')
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(2)
-<<<<<<< HEAD
-
-=======
->>>>>>> 702afab4c24008f4297d592e0430cdf2b55326a6
+WebUI.waitForPageLoad(6)

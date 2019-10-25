@@ -21,9 +21,9 @@ WebUI.maximizeWindow()
 
 WebUI.clearText(findTestObject('Login/textbox_Username'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Login/textbox_Username'), 'dev09')
+WebUI.setEncryptedText(findTestObject('Login/textbox_Username'), 'kI5t6QHdkRw=')
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev09')
+WebUI.setEncryptedText(findTestObject('Login/textbox_Password'), 'kI5t6QHdkRw=')
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login_User_Normal</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>def0efda-7061-4e1a-8249-2c90ec270945</testCaseGuid>
+   <variable>
+      <defaultValue>'dev04'</defaultValue>
+      <description></description>
+      <id>4613a747-71fe-4883-97d1-8d2cd5e163e2</id>
+      <masked>false</masked>
+      <name>Username</name>
+   </variable>
+   <variable>
+      <defaultValue>'dev04'</defaultValue>
+      <description></description>
+      <id>719af8b4-e431-4dad-b879-45d0060c771b</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+</TestCaseEntity>

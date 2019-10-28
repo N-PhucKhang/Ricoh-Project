@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Popup_Choose_Sale_Comp</name>
+   <tag></tag>
+   <elementGuidId>4abb5e1f-4eb7-46a6-b4b8-4ef86a2c7472</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;previousButton_tuvvlikzpnnx&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

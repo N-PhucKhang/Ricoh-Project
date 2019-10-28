@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_ShowErrMsgWhenClickButton_CancelClearance</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>89b05cd3-a164-4731-ad0f-c628c3dd5e1b</testCaseGuid>
+</TestCaseEntity>

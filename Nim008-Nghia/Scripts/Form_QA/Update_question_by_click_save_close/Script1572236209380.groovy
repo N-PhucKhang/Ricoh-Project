@@ -3,6 +3,7 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import org.junit.After as After
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -24,6 +25,8 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('list_question_tab'))
 
+WebUI.delay(10)
+
 WebUI.click(findTestObject('edit_image'))
 
 WebUI.delay(2)
@@ -32,21 +35,56 @@ WebUI.switchToWindowIndex(1)
 
 WebUI.check(findTestObject('qa_div_1_checkbox'))
 
-WebUI.setText(findTestObject('to_textbox'), 'nghia@pasona.com')
+WebUI.click(findTestObject('TO_button'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.switchToWindowIndex(2)
+
+WebUI.setText(findTestObject('search_user_name'), 'a')
+
+WebUI.click(findTestObject('search_user_name_button'))
+
+WebUI.click(findTestObject('choose_user_mail'))
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？update2')
+WebUI.click(findTestObject('select_button'))
+
+WebUI.switchToWindowIndex(1)
+
+WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？updated by NghiaHH')
 
 WebUI.delay(2)
 
 WebUI.click(findTestObject('save_close_button'))
 
-CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user',
-	'Log_seaRch_uSer', 'imart_rfg')
+CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
+    'Log_seaRch_uSer', 'imart_rfg')
 
-def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_SD_RECORD_USER_CD=\'' + GlobalVariable.user +  '\' AND IMFR_SD_RECORD_DATE = (SELECT MAX(IMFR_SD_RECORD_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
+def countData = CustomKeywords.'com.database.connectSql.executeQuery'(('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_SD_RECORD_USER_CD=\'' + 
+    GlobalVariable.user) + '\' AND IMFR_SD_RECORD_DATE = (SELECT MAX(IMFR_SD_RECORD_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
 
 WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+
+String flag
+try {
+	WebUI.switchToWindowIndex(1)
+} catch (Exception e) {
+	flag = 'Closed popup'
+	e.printStackTrace()
+}
+WebUI.verifyEqual(flag, 'Closed popup')
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.click(findTestObject('pager'))
+
+WebUI.click(findTestObject('pager_200'))
+
+String object = WebUI.executeJavaScript('return $(\'[title="金曜日は25日ですか？updated by NghiaHH"]\').parent("tr").get(0).id', null)
+
+println(object)
+WebUI.verifyNotEqual(object, null)
+
 WebUI.closeBrowser()
+
 

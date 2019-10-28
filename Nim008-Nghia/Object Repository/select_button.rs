@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>to_textbox</name>
+   <name>select_button</name>
    <tag></tag>
-   <elementGuidId>9e0cc91c-e89a-45ff-9dd5-62c6825bcc02</elementGuidId>
+   <elementGuidId>b5ed27fc-76ce-4b76-9549-c444bf3ef366</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@name=&quot;to&quot;]</value>
+         <value>//*[@id=&quot;previousButton_xdrpmdrgjdvj&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@name=&quot;to&quot;]</value>
+      <value>//*[@id=&quot;previousButton_xdrpmdrgjdvj&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

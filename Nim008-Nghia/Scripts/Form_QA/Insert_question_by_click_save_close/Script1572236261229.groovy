@@ -2,6 +2,11 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import javax.jws.WebResult
+
+import org.openqa.selenium.WebElement
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -43,18 +48,51 @@ WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_a
 
 WebUI.check(findTestObject('qa_div_1_checkbox'))
 
-WebUI.setText(findTestObject('to_textbox'), 'nghia@pasona.com')
+WebUI.click(findTestObject('TO_button'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？')
+WebUI.switchToWindowIndex(2)
+
+WebUI.setText(findTestObject('search_user_name'), 'a')
+
+WebUI.click(findTestObject('search_user_name_button'))
+
+WebUI.click(findTestObject('choose_user_mail'))
+
+WebUI.click(findTestObject('select_button'))
+
+WebUI.switchToWindowIndex(1)
+
+WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？inserted by NghiaHH')
+String link_registraton = WebUI.getUrl()
 
 WebUI.click(findTestObject('save_close_button'))
 
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
     'Log_seaRch_uSer', 'imart_rfg')
 
-def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_UD_TO = \'nghia@pasona.com\' AND IMFR_SD_CREATE_DATE = (SELECT MAX(IMFR_SD_CREATE_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
+def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_UD_QUESTION = \'金曜日は25日ですか？inserted by NghiaHH\' AND IMFR_SD_CREATE_DATE = (SELECT MAX(IMFR_SD_CREATE_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
 
 WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+
+String flag
+try {
+	WebUI.switchToWindowIndex(1)
+} catch (Exception e) {
+	flag = 'Closed popup'
+	e.printStackTrace()
+}
+WebUI.verifyEqual(flag, 'Closed popup')
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.click(findTestObject('list_question_tab'))
+
+def countRow = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002')
+WebUI.delay(2)
+
+String countRowsOnGrids =  WebUI.executeJavaScript('return $(\'#gt8\').jqGrid(\'getGridParam\', \'records\')', null)
+  
+WebUI.verifyEqual((countRow[0])[0], countRowsOnGrids)
 
 WebUI.closeBrowser()
 

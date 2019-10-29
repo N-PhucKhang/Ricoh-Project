@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>hdd_insert_idd</name>
+   <name>clear_tab4</name>
    <tag></tag>
-   <elementGuidId>d123a6e9-4474-4c69-8300-9d0831651be0</elementGuidId>
+   <elementGuidId>96a129b2-6051-4e30-946e-0d773a0b8c63</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;4&quot;]/td[13]</value>
+         <value>//*[@id=&quot;eventButton_akbtbbiclqwc&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;4&quot;]/td[13]</value>
+      <value>//*[@id=&quot;eventButton_akbtbbiclqwc&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

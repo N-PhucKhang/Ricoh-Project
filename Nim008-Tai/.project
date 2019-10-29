@@ -53,7 +53,11 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>1571885112373</id>
+=======
+			<id>1571888706217</id>
+>>>>>>> 0016de3ee64ca43d8696595cd957fd2ec651411d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -62,7 +66,11 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>1571885112373</id>
+=======
+			<id>1571888706220</id>
+>>>>>>> 0016de3ee64ca43d8696595cd957fd2ec651411d
 			<name></name>
 			<type>6</type>
 			<matcher>

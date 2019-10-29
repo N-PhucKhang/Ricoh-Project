@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Into_Admin_Form</name>
+   <tag></tag>
+   <elementGuidId>f7856441-5101-41f5-a5b5-68af71a8c304</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;im_menu_tree_8fc5lgxl7zfhp&quot;]/div/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;im_menu_tree_8fc5lgxl7zfhp&quot;]/div/a</value>
+   </webElementProperties>
+</WebElementEntity>

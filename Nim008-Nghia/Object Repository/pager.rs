@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>pager</name>
+   <tag></tag>
+   <elementGuidId>3702be3a-4a5b-492a-967f-74fbdcbf94b9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;pager_gt8_center&quot;]/table/tbody/tr/td[8]/select</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;pager_gt8_center&quot;]/table/tbody/tr/td[8]/select</value>
+   </webElementProperties>
+</WebElementEntity>

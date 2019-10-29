@@ -53,7 +53,7 @@ WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('send_response_button'))
+WebUI.click(findTestObject('reply_questioner_button'))
 
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
     'Log_seaRch_uSer', 'imart_rfg')
@@ -68,5 +68,4 @@ WebUI.verifyTextPresent('Q&A本文を保存し、メールを送信しました'
 WebUI.click(findTestObject('ok_button'))
 
 WebUI.verifyTextPresent('問い合わせ内容', false)
-
 

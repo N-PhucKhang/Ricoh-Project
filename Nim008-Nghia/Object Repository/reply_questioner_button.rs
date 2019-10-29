@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>choose_user_mail</name>
+   <name>reply_questioner_button</name>
    <tag></tag>
-   <elementGuidId>a3dad302-9014-42c5-9004-8868af26dd71</elementGuidId>
+   <elementGuidId>d6cbeefd-b349-45da-82ad-fac168cd2d30</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
+         <value>//*[@id=&quot;registButton_naxeybgmzubf&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
+      <value>//*[@id=&quot;registButton_naxeybgmzubf&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

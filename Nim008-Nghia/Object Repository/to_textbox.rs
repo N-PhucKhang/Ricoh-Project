@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;fgfsilrxunao&quot;]/textarea</value>
+         <value>//*[@name=&quot;to&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;fgfsilrxunao&quot;]/textarea</value>
+      <value>//*[@name=&quot;to&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

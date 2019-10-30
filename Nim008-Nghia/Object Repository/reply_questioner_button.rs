@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>to_textbox</name>
+   <name>reply_questioner_button</name>
    <tag></tag>
-   <elementGuidId>9e0cc91c-e89a-45ff-9dd5-62c6825bcc02</elementGuidId>
+   <elementGuidId>d6cbeefd-b349-45da-82ad-fac168cd2d30</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@name=&quot;to&quot;]</value>
+         <value>//*[@id=&quot;registButton_naxeybgmzubf&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@name=&quot;to&quot;]</value>
+      <value>//*[@id=&quot;registButton_naxeybgmzubf&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

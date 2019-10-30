@@ -3,10 +3,10 @@
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
  */
 
-import java.sql.Connection
-
 import java.lang.String
 
+<<<<<<< HEAD
+=======
 import com.katalon.plugin.keyword.connection.DBType
 
 import java.sql.ResultSet
@@ -89,6 +89,7 @@ def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingInt
          , 	port
          , 	dbName)
 }
+>>>>>>> 9d7a52bf00e226bd309c91fc113e56a573498793
 
 def static "com.database.connectSql.connectDB"(
     	String server	
@@ -122,6 +123,8 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
+<<<<<<< HEAD
+=======
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getRowCount"(
     	ResultSet rs	) {
     (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getRowCount(
@@ -208,6 +211,7 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListRowVa
          , 	toRowIndex)
 }
 
+>>>>>>> 9d7a52bf00e226bd309c91fc113e56a573498793
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
 }

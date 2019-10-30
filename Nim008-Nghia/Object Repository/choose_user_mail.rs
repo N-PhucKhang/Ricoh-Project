@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>to_textbox</name>
+   <name>choose_user_mail</name>
    <tag></tag>
-   <elementGuidId>9e0cc91c-e89a-45ff-9dd5-62c6825bcc02</elementGuidId>
+   <elementGuidId>a3dad302-9014-42c5-9004-8868af26dd71</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@name=&quot;to&quot;]</value>
+         <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@name=&quot;to&quot;]</value>
+      <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>to_textbox</name>
+   <name>popup_confirm_QA</name>
    <tag></tag>
-   <elementGuidId>9e0cc91c-e89a-45ff-9dd5-62c6825bcc02</elementGuidId>
+   <elementGuidId>6dc8057c-a06f-47c2-8b60-fbf2038e374a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@name=&quot;to&quot;]</value>
+         <value>/html/body/div[9]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@name=&quot;to&quot;]</value>
+      <value>/html/body/div[9]</value>
    </webElementProperties>
 </WebElementEntity>

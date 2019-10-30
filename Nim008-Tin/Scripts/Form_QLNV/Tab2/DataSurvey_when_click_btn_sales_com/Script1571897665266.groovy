@@ -1,8 +1,19 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
 
 "Login to nim008_apl001 and switch to tab 2"
 println('----- LOGIN AND SWITCH TO TAB 2 -----')
@@ -49,7 +60,7 @@ CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pd
 println('----- END CONNECT DATABASE -----')
 
 println('----- GET SUMMARIES SALES COM DETAIL FROM DB -----')
-sql_select_sales_com_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
+sql_select_sales_com_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer_name AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
 println('SQL select sales com detail: ' + sql_select_sales_com_detail)
 def sales_com_detail_list = CustomKeywords.'com.database.connectSql.executeQuery'(sql_select_sales_com_detail.toString())
 println('sales com detail list:')
@@ -139,4 +150,12 @@ CustomKeywords.'com.helpers.Tab2Helpers.surveySumariesData'(
 )
 println('----- END SURVEY SUMMARIES DATA -----');
 
+println('----- SURVEY DETAIL DATAS -----');
+CustomKeywords.'com.helpers.Tab2Helpers.surveySumariesData'(
+	array_summaries_detail_from_db,
+	array_summaries_from_db,
+	array_summaries_detail_from_grid_table,
+	array_summaries_from_grid_table
+)
+println('----- END DETAIL DATAS  -----');
 

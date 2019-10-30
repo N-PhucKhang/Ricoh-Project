@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Tab2</name>
+   <name>into_Tab2</name>
    <tag></tag>
    <elementGuidId>695236ce-790a-47ef-a9e7-17573b7a9e35</elementGuidId>
    <selectorCollection>

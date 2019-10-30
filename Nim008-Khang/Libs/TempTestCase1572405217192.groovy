@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_QLNV\\Tab1\\VerifyHappyCase_SelectDataGridTable\\20191025_162704\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_Admin\\VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport\\20191030_101337\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Form_QLNV/Tab1/VerifyHappyCase_SelectDataGridTable', new TestCaseBinding('Test Cases/Form_QLNV/Tab1/VerifyHappyCase_SelectDataGridTable',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Form_Admin/VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport', new TestCaseBinding('Test Cases/Form_Admin/VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

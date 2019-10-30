@@ -14,7 +14,7 @@ WebUI.clearText(findTestObject('Login/textbox_Username'), FailureHandling.STOP_O
 
 WebUI.setText(findTestObject('Login/textbox_Username'), 'dev04')
 
-WebUI.setEncryptedText(findTestObject('Login/textbox_Username'), 'TTqB56UtSiQ=')
+WebUI.setEncryptedText(findTestObject('Login/textbox_Password'), 'TTqB56UtSiQ=')
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 

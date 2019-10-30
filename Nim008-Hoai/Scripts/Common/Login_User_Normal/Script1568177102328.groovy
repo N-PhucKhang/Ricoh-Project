@@ -15,7 +15,7 @@ WebUI.clearText(findTestObject('Login/textbox_Username'), FailureHandling.STOP_O
 
 WebUI.setText(findTestObject('Login/textbox_Username'), 'dev04')
 
-WebUI.setText(findTestObject('Login/textbox_Password'), 'dev40')
+WebUI.setText(findTestObject('Login/textbox_Password'), 'dev44')
 
 WebUI.click(findTestObject('Login/button_Login'), FailureHandling.STOP_ON_FAILURE)
 

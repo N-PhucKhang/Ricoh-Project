@@ -21,6 +21,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class Tab2Helpers {
+	
+	PrintServey printServey = new PrintServey();
 
 	@Keyword
 	def String convert(String string) {
@@ -155,61 +157,57 @@ public class Tab2Helpers {
 			)
 		]);
 
-		printArrayResult(arrayHeader, arrayResult);
+		printServey.print(arrayHeader, arrayResult);
 	}
 			
-	def surveyDetailDatas () {
+	def surveyDetailDatas (LinkedList<String[]> arrayDetailFromDB, LinkedList<String[]> arrayDetailFromGT) {
+		ArrayList<String> arrayIdFromDB = new ArrayList<String>();
+		ArrayList<String> arrayIdFromGT = new ArrayList<String>();
+		for(int i = 0; i < arrayDetailFromDB.size(); i++) {
+			arrayIdFromDB.add(arrayDetailFromDB.get(i).get(0))
+		}
+		for(int i = 0; i < arrayDetailFromGT.size(); i++) {
+			arrayIdFromGT.add(arrayDetailFromGT.get(i).get(9))
+		}
 		
+		println(' =====> INPUT');
+		println(' => array id from db:');
+		println('    ' + arrayIdFromDB);
+		println(' => array id from grid table:');
+		println('    ' + arrayIdFromGT);
+		println(' =====> SURVEY RESULT');
+		
+		def arrayHeader = [];
+		def arrayResult = [];
+		
+		arrayHeader.add([
+			'case',
+			'array id from db',
+			'array id from grid table',
+			'result'
+		])
+		
+		arrayResult.add([
+			'size',
+			arrayIdFromDB.size(),
+			arrayIdFromGT.size(),
+			getResult(arrayIdFromDB.size() == arrayIdFromGT.size())
+		])
+		
+		arrayResult.add([
+			'same with others',
+			arrayIdFromDB.containsAll(arrayIdFromGT),
+			arrayIdFromGT.containsAll(arrayIdFromDB),
+			getResult(
+				arrayIdFromDB.containsAll(arrayIdFromGT) 
+				&& arrayIdFromGT.containsAll(arrayIdFromDB)
+			)
+		])
+		
+		printServey.print(arrayHeader, arrayResult);
 	}
 
-	def printArrayResult(ArrayList<ArrayList<String>> arrayHeader, ArrayList<ArrayList<String>> arrayResult) {
-		def arrayFormat = getFormatArray(arrayHeader, arrayResult);
-		def stringFormat = getFormatString(arrayFormat);
-		printLine(arrayFormat);
-		println(sprintf(stringFormat, arrayHeader.get(0)));
-		printLine(arrayFormat);
-		for (int i = 0; i < arrayResult.size(); i++) {
-			println(sprintf(stringFormat, arrayResult.get(i)));
-		}
-		printLine(arrayFormat);
-	}
-
-	def ArrayList<Integer> getFormatArray(ArrayList<ArrayList<String>> arrayHeader, ArrayList<ArrayList<String>> arrayResult) {
-		def arrayFormat = [];
-		for (int i = 0; i < arrayHeader.get(0).size(); i++) {
-			arrayFormat.add(arrayHeader.get(0).get(i).toString().length());
-		}
-		for (int i = 0; i < arrayResult.size(); i++) {
-			for(int j = 0; j < arrayResult.get(i).size(); j ++) {
-				if(arrayResult.get(i).get(j).toString().length() > arrayFormat.get(j)) {
-					arrayFormat.set(j, arrayResult.get(i).get(j).toString().length());
-				}
-			}
-		}
-		return arrayFormat;
-	}
-
-	def String getFormatString(ArrayList<Integer> arrayFormat) {
-		def stringFormat = '|';
-		for (int i = 0; i < arrayFormat.size(); i++) {
-			stringFormat += (' %-' + arrayFormat.get(i) + 's |');
-		}
-		return stringFormat;
-	}
-
-	def printLine(ArrayList<Integer> arrayFormat) {
-		print('+');
-		for (int i = 0; i < arrayFormat.size(); i++) {
-			print('-');
-			for (int j = 0; j < arrayFormat.get(i); j++) {
-				print('-');
-			}
-			print('-');
-			print('+');
-		}
-		print('\n');
-
-	}
+	
 
 	def String getResult(Boolean bool) {
 		return bool == true ? 'PASS' : 'FAILED';

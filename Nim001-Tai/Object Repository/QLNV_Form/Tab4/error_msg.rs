@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Department</name>
+   <name>error_msg</name>
    <tag></tag>
-   <elementGuidId>57bbffd0-64d5-46ca-9093-eb65c7863b66</elementGuidId>
+   <elementGuidId>5e63b255-ee29-42f7-8bf4-b83ad95d4d9c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+         <value>//*[@id=&quot;imui-messagebox&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+      <value>//*[@id=&quot;imui-messagebox&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

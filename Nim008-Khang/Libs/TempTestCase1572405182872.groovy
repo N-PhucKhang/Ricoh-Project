@@ -7,18 +7,16 @@ import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.webui.contribution.WebUiDriverCleaner
 import com.kms.katalon.core.mobile.contribution.MobileDriverCleaner
 import com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner
-import com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner
 
 
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.webui.contribution.WebUiDriverCleaner())
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.mobile.contribution.MobileDriverCleaner())
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
-DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_QLNV\\Tab2\\DataSurvey_when_click_btn_sales_com\\20191024_164235\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Form_Admin\\VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport\\20191030_101302\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Form_QLNV/Tab2/DataSurvey_when_click_btn_sales_com', new TestCaseBinding('Test Cases/Form_QLNV/Tab2/DataSurvey_when_click_btn_sales_com',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Form_Admin/VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport', new TestCaseBinding('Test Cases/Form_Admin/VerifyHappyCase_ShowErrMsgWhenClickButton_DownloadDataImport',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

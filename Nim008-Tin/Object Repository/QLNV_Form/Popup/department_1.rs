@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Department</name>
+   <name>department_1</name>
    <tag></tag>
-   <elementGuidId>57bbffd0-64d5-46ca-9093-eb65c7863b66</elementGuidId>
+   <elementGuidId>9fa2d7df-6ca6-49cc-bb99-ebad82f38990</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+         <value>//*[@id=&quot;1&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+      <value>//*[@id=&quot;1&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

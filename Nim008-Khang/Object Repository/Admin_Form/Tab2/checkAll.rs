@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Department</name>
+   <name>checkAll</name>
    <tag></tag>
-   <elementGuidId>57bbffd0-64d5-46ca-9093-eb65c7863b66</elementGuidId>
+   <elementGuidId>4d0e61eb-ff54-4d13-a594-a7b2d712aeee</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+         <value>//input[@id=&quot;cb_gt7&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;nextButton_luekhlajdisk&quot;]</value>
+      <value>//input[@id=&quot;cb_gt7&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

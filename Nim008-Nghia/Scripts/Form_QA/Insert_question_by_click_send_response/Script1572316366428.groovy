@@ -21,15 +21,25 @@ WebUI.waitForPageLoad(3)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('list_question_tab'))
+WebUI.click(findTestObject('sale_comp_button'))
 
-WebUI.delay(10)
-
-WebUI.click(findTestObject('edit_image'))
+WebUI.waitForPageLoad(3)
 
 WebUI.delay(2)
 
-WebUI.switchToWindowIndex(1)
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001')
+
+WebUI.click(findTestObject('sale_value_equal_26'))
+
+WebUI.click(findTestObject('choice_button'))
+
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
+
+WebUI.check(findTestObject('salecom_checkbox'))
+
+WebUI.click(findTestObject('QA_button'))
+
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_application_view/sf_nim008_apl002?imui-theme-builder-module=headwithcontainer')
 
 WebUI.check(findTestObject('qa_div_1_checkbox'))
 
@@ -43,30 +53,56 @@ WebUI.click(findTestObject('search_user_name_button'))
 
 WebUI.click(findTestObject('choose_user_mail'))
 
-WebUI.delay(2)
-
 WebUI.click(findTestObject('select_button'))
 
 WebUI.switchToWindowIndex(1)
 
-WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？updated by NghiaHH')
+WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？inserted by NghiaHH')
 
-WebUI.delay(2)
+String link_registraton = WebUI.getUrl()
+
+WebUI.getUrl().contains('regist_application_view')
 
 WebUI.click(findTestObject('send_response_button'))
 
-CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
-    'Log_seaRch_uSer', 'imart_rfg')
-
-def countData = CustomKeywords.'com.database.connectSql.executeQuery'(('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_SD_RECORD_USER_CD=\'' + 
-    GlobalVariable.user) + '\' AND IMFR_SD_RECORD_DATE = (SELECT MAX(IMFR_SD_RECORD_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
-
-WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+WebUI.delay(2)
 
 WebUI.verifyTextPresent('Q&A本文を保存し、メールを送信しました', false)
 
 WebUI.click(findTestObject('ok_button'))
 
-WebUI.verifyTextPresent('問い合わせ内容', false)
+WebUI.getUrl().contains('edit_application_view')
 
+CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
+    'Log_seaRch_uSer', 'imart_rfg')
+
+def countData = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002 WHERE IMFR_UD_QUESTION = \'金曜日は25日ですか？inserted by NghiaHH\' AND IMFR_SD_CREATE_DATE = (SELECT MAX(IMFR_SD_CREATE_DATE) FROM IMFR_UT_SF_NIM008_APL002 )')
+
+WebUI.verifyGreaterThanOrEqual((countData[0])[0], 1)
+
+WebUI.click(findTestObject('send_response_button'))
+
+WebUI.click(findTestObject('ok_button'))
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.click(findTestObject('list_question_tab'))
+
+WebUI.click(findTestObject('pager'))
+
+WebUI.click(findTestObject('pager_200'))
+
+WebUI.verifyTextPresent('金曜日は25日ですか？inserted by NghiaHH', false)
+
+WebUI.click(findTestObject('list_question_tab'))
+
+def countRow = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002')
+
+WebUI.delay(2)
+
+String countRowsOnGrids = WebUI.executeJavaScript('return $(\'#gt8\').jqGrid(\'getGridParam\', \'records\')', null)
+
+WebUI.verifyEqual((countRow[0])[0], countRowsOnGrids)
+
+WebUI.closeBrowser()
 

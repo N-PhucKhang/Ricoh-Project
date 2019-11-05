@@ -27,30 +27,45 @@ WebUI.delay(2)
 
 
 "Select sales com button, then select 5 sales_com and click btn choose"
-println('----- SELECT SALES COM -----')
+println('----- SELECT SALES COM AND DEPARMENTS -----')
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab2/button_SalesCom'))
 WebUI.switchToWindowIndex(1)
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_1'))
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_2'))
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_3'))
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_4'))
-WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_5'))
-//WebUI.click(findTestObject('QLNV_Form/Tab2/checkbox_Popup_CheckAll_SalesCom'))
+//WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_1'))
+//WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_2'))
+//WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_3'))
+//WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_4'))
+//WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/sale_com_5'))
+WebUI.click(findTestObject('QLNV_Form/Tab2/checkbox_Popup_CheckAll_SalesCom'))
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab2/button_Popup_Choose'))
-println('----- END SELECT SALES COM -----')
+
+WebUI.switchToWindowIndex(0)
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab2/button_Department'))
+WebUI.switchToWindowIndex(1)
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/department_1'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Popup/department_2'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab2/button_Popup_Choose'))
+println('----- END SELECT SALES COM AND DEPARMENTS -----')
 WebUI.delay(2)
 
 "Get hidden sales com selected values"
-println('----- GET HIDDEN SELECT SALES COM VALUES -----')
+println('----- GET HIDDEN SELECT SALES COM AND HIDDEN DEPARTMENT VALUES -----')
 WebUI.switchToWindowIndex(0)
 hidden_sales_com_values = WebUI.getAttribute(findTestObject('Object Repository/QLNV_Form/Tab2/hidden_sales_com'), "value")
 println("hidden sales com: " + hidden_sales_com_values)
-println('----- END GET HIDDEN SELECT SALES COM VALUES -----')
+
+hidden_department_values = WebUI.getAttribute(findTestObject('Object Repository/QLNV_Form/Tab2/hidden_department'), "value")
+println("hidden department: " + hidden_department_values)
+println('----- END GET HIDDEN SELECT SALES COM AND HIDDEN DEPARTMENT VALUES -----')
 
 "Convert input values"
 println('----- CONVERT INPUT VALUES -----')
 def hidden_sales_com_param = CustomKeywords.'com.helpers.Tab2Helpers.convert'(hidden_sales_com_values)
 println('Hidden sales com param: ' + hidden_sales_com_param)
+
+def hidden_department_param = CustomKeywords.'com.helpers.Tab2Helpers.convert'(hidden_department_values)
+println('Hidden department param: ' + hidden_department_param)
 println('----- END CONVERT INPUT VALUES -----')
 
 "Connect DB and get values"
@@ -60,9 +75,9 @@ CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pd
 println('----- END CONNECT DATABASE -----')
 
 println('----- GET SUMMARIES SALES COM DETAIL FROM DB -----')
-sql_select_sales_com_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer_name AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
-println('SQL select sales com detail: ' + sql_select_sales_com_detail)
-def sales_com_detail_list = CustomKeywords.'com.database.connectSql.executeQuery'(sql_select_sales_com_detail.toString())
+sql_select_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer_name AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param + " AND imfr_ud_department_name IN " + hidden_department_param
+println('SQL select sales com detail: ' + sql_select_detail)
+def sales_com_detail_list = CustomKeywords.'com.database.connectSql.executeQuery'(sql_select_detail.toString())
 println('sales com detail list:')
 println(sales_com_detail_list)
 println("Summary sales com detail list from DB: " + CustomKeywords.'com.helpers.Tab2Helpers.countItems'(sales_com_detail_list)
@@ -81,7 +96,7 @@ def array_summaries_detail_from_db = [
 println('----- END GET SUMMARIES SALES COM DETAIL FROM DB -----')
 
 println('----- GET SALES COM SUMMARIES FROM DB -----')
-sql_select_sales_com_summary = "SELECT COUNT(imfr_ud_sales_com) AS sales_com_count, COUNT(imfr_ud_department_name) AS department_count, SUM(imfr_ud_func_now_debit) AS func_now_debit_total, SUM(imfr_ud_func_now_credit) AS func_now_credit_total, SUM(imfr_ud_amount_of_money) AS amount_of_money_total FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
+sql_select_sales_com_summary = "SELECT COUNT(imfr_ud_sales_com) AS sales_com_count, COUNT(imfr_ud_department_name) AS department_count, SUM(imfr_ud_func_now_debit) AS func_now_debit_total, SUM(imfr_ud_func_now_credit) AS func_now_credit_total, SUM(imfr_ud_amount_of_money) AS amount_of_money_total FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param + " AND imfr_ud_department_name IN " + hidden_department_param
 println('SQL select sales com summary: ' + sql_select_sales_com_summary);
 def sales_com_summary_list = CustomKeywords.'com.database.connectSql.executeQuery'(sql_select_sales_com_summary.toString())
 println('sales com summary list:')
@@ -126,17 +141,17 @@ def gt_summaries_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableDat
 println('gt summaries datas');
 println(gt_summaries_datas);
 println('Summaries grid table summaries: ' + gt_summaries_datas[0][0]
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4])
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][1])
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3])
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][4])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][1])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][3])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][6])
 );
 
 def array_summaries_from_grid_table = [
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][2]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][2]),
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][4]),
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][3]),
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[1][6])
 ]
 
 println('----- END GET DATAS GRID TABLE SUMMARIES -----');
@@ -156,4 +171,3 @@ CustomKeywords.'com.helpers.Tab2Helpers.surveyDetailDatas'(
 	gt_detail_datas
 )
 println('----- END DETAIL DATAS  -----');
-

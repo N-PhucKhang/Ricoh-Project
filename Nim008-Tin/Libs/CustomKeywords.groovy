@@ -7,6 +7,10 @@ import java.lang.String
 
 import java.util.LinkedList
 
+import java.lang.Integer
+
+import java.util.ArrayList
+
 
 def static "com.database.connectSql.connectDB"(
     	String server	
@@ -50,26 +54,46 @@ def static "com.helpers.Tab2Helpers.convert"(
         	string)
 }
 
+def static "com.helpers.Tab2Helpers.convertStringToBigDecimal"(
+    	String string	) {
+    (new com.helpers.Tab2Helpers()).convertStringToBigDecimal(
+        	string)
+}
+
 def static "com.helpers.Tab2Helpers.countItems"(
     	java.util.LinkedList<String[]> array	) {
     (new com.helpers.Tab2Helpers()).countItems(
         	array)
 }
 
-def static "com.helpers.Tab2Helpers.getUncollectedTotal"(
-    	java.util.LinkedList<String[]> array	) {
-    (new com.helpers.Tab2Helpers()).getUncollectedTotal(
-        	array)
+def static "com.helpers.Tab2Helpers.getColumnTotalValue"(
+    	java.util.LinkedList<String[]> array	
+     , 	Integer columnNo	) {
+    (new com.helpers.Tab2Helpers()).getColumnTotalValue(
+        	array
+         , 	columnNo)
 }
 
-def static "com.helpers.Tab2Helpers.getOverpaymentTotal"(
-    	java.util.LinkedList<String[]> array	) {
-    (new com.helpers.Tab2Helpers()).getOverpaymentTotal(
-        	array)
+def static "com.helpers.Tab2Helpers.getGridTableHeaderName"(
+    	String gridTable	) {
+    (new com.helpers.Tab2Helpers()).getGridTableHeaderName(
+        	gridTable)
 }
 
-def static "com.helpers.Tab2Helpers.getAmountOfMoneyTotal"(
-    	java.util.LinkedList<String[]> array	) {
-    (new com.helpers.Tab2Helpers()).getAmountOfMoneyTotal(
-        	array)
+def static "com.helpers.Tab2Helpers.getGridTableData"(
+    	String gridTable	) {
+    (new com.helpers.Tab2Helpers()).getGridTableData(
+        	gridTable)
+}
+
+def static "com.helpers.Tab2Helpers.surveySumariesData"(
+    	java.util.ArrayList<java.math.BigDecimal> array_summaries_detail_from_db	
+     , 	java.util.ArrayList<java.math.BigDecimal> array_summaries_from_db	
+     , 	java.util.ArrayList<java.math.BigDecimal> array_summaries_detail_from_grid_table	
+     , 	java.util.ArrayList<java.math.BigDecimal> array_summaries_from_grid_table	) {
+    (new com.helpers.Tab2Helpers()).surveySumariesData(
+        	array_summaries_detail_from_db
+         , 	array_summaries_from_db
+         , 	array_summaries_detail_from_grid_table
+         , 	array_summaries_from_grid_table)
 }

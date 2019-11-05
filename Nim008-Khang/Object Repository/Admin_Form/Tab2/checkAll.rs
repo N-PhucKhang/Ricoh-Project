@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>choose_user_mail</name>
+   <name>checkAll</name>
    <tag></tag>
-   <elementGuidId>a3dad302-9014-42c5-9004-8868af26dd71</elementGuidId>
+   <elementGuidId>4d0e61eb-ff54-4d13-a594-a7b2d712aeee</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
+         <value>//input[@id=&quot;cb_gt7&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@title=&quot;Mami@dummy.com&quot;]</value>
+      <value>//input[@id=&quot;cb_gt7&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Tab2</name>
+   <name>department_2</name>
    <tag></tag>
-   <elementGuidId>695236ce-790a-47ef-a9e7-17573b7a9e35</elementGuidId>
+   <elementGuidId>0fc130b3-dcf4-42ca-be2a-4abae1accd1e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;imfr-tab-1&quot;]</value>
+         <value>//*[@id=&quot;jqg_gt11_2&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;imfr-tab-1&quot;]</value>
+      <value>//*[@id=&quot;jqg_gt11_2&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

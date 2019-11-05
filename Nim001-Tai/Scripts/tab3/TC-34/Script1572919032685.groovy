@@ -12,6 +12,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev09', ('Password') : 'dev09'], FailureHandling.STOP_ON_FAILURE)
 
@@ -25,3 +27,6 @@ WebUI.waitForPageLoad(4)
 
 WebUI.click(findTestObject('QLNV_Form/Tab4/download_bt'))
 
+String countRows = WebUI.executeJavaScript("return \$('#gt6').jqGrid('getGridParam', 'records');", null)
+
+WebUI.verifyMatch((countRows[0])[0], '0', true, FailureHandling.STOP_ON_FAILURE)

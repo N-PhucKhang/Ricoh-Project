@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>all data have CLEAR_FLAG = 1</description>
+   <name>TC-37</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fe5fdf36-6017-4f90-ae4e-250f910ad50e</testCaseGuid>
+</TestCaseEntity>

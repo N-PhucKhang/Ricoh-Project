@@ -1,8 +1,17 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
 
 "Login to nim008_apl001 and switch to tab 2"
 println('----- LOGIN AND SWITCH TO TAB 2 -----')
@@ -49,7 +58,7 @@ CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pd
 println('----- END CONNECT DATABASE -----')
 
 println('----- GET SUMMARIES SALES COM DETAIL FROM DB -----')
-sql_select_sales_com_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
+sql_select_sales_com_detail = "SELECT imfr_sd_insert_id AS insert_id, imfr_ud_sales_com AS sales_com, imfr_ud_department_name AS department_name, imfr_ud_customer_name AS customer, imfr_ud_journal_date AS journal_date, imfr_ud_application_key AS application_key, imfr_ud_customer_nm AS customer_nm, imfr_ud_func_now_debit AS func_now_debit, imfr_ud_func_now_credit AS func_now_credit, imfr_ud_amount_of_money AS amount_of_money, imfr_ud_qa AS qa, imfr_ud_product_cd AS product_cd, imfr_ud_product_name AS product_name FROM imfr_ut_sf_nim008_apl001 WHERE imfr_ud_sales_com IN " + hidden_sales_com_param
 println('SQL select sales com detail: ' + sql_select_sales_com_detail)
 def sales_com_detail_list = CustomKeywords.'com.database.connectSql.executeQuery'(sql_select_sales_com_detail.toString())
 println('sales com detail list:')
@@ -91,19 +100,19 @@ def array_summaries_from_db = [
 println('----- END GET SALES COM SUMMARIES FROM DB -----');
 
 println('----- GET DATAS GRID TABLE DETAIL -----');
-def gt_detail_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'('gt3');
+def gt_detail_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'("gt3");
 println('gt detail datas');
 println(gt_detail_datas);
 println('Summaries grid table detail: ' + CustomKeywords.'com.helpers.Tab2Helpers.countItems'(gt_detail_datas)
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 3)
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 0)
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 6)
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 7)
 );
 
 def array_summaries_detail_from_grid_table = [
 	CustomKeywords.'com.helpers.Tab2Helpers.countItems'(gt_detail_datas),
-	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 3),
 	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 0),
+	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 6),
 	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 7)
 ]
 
@@ -114,18 +123,18 @@ println('----- GET DATAS GRID TABLE SUMMARIES -----');
 def gt_summaries_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'('gt2');
 println('gt summaries datas');
 println(gt_summaries_datas);
-println('Summaries grid table summaries: ' + gt_summaries_datas[0][0]
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4])
+println('Summaries grid table summaries: ' + gt_summaries_datas[0][5]
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][1])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][0])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][2])
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3])
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
 );
 
 def array_summaries_from_grid_table = [
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][1]),
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][0]),
 	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][2]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3])
 ]
 
 println('----- END GET DATAS GRID TABLE SUMMARIES -----');

@@ -18,7 +18,7 @@ WebUI.verifyEqual(errMsg , "対象がありません。チェックをしてく�
 
 WebUI.delay(2)
 
-WebUI.check(findTestObject('Object Repository/Admin_Form/Tab2/checkAll'))
+WebUI.check(findTestObject('Admin_Form/Tab2/checkAll_GridTable'))
 WebUI.click(findTestObject('Admin_Form/button_Tab2_Download_Data_Clear'))
 errMsg1 = WebUI.getText(findTestObject('label_errMsg'))
 WebUI.verifyEqual(errMsg1, "複数選択されています。１つチェックをしてください。")

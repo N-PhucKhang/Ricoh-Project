@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>insert_data</name>
+   <tag></tag>
+   <elementGuidId>7d32e3a8-7026-4df5-9088-e9ec9fa71ed0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@id=&quot;eventButton_yafzvqpkdqte&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//input[@id=&quot;eventButton_yafzvqpkdqte&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

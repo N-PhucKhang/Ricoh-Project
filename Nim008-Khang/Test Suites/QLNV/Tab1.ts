@@ -11,31 +11,31 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>db125831-5db5-4361-a3b3-9a264aaca664</testSuiteGuid>
    <testCaseLink>
-      <guid>05875515-2eb0-4460-ac04-3e76bdeb7ed2</guid>
+      <guid>c49cc998-bdd9-4fb5-9071-c6657d6fc898</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_Select2Item</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6914917f-dce6-4986-b49f-99792eff3ee7</guid>
+      <guid>e040ffdd-6a18-4bd4-90d9-b8d86325ca8b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_SelectDataGridTable</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1b05540a-69da-4a6b-afba-7ba1df77a335</guid>
+      <guid>dd6c10bb-af23-40ff-a187-38a6e9b3730f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_ShowErrMsgWhenClickButtonQA</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0a7e57fb-1a2f-4fab-8e1f-f41f531e7d72</guid>
+      <guid>9122009e-86a5-4808-92d1-679e292c77a4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_ShowErrMsgWhenClick_2TimeButtonQA</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d164a6e0-ed20-4f71-a55b-961be0c49dcc</guid>
+      <guid>43fadd67-f408-4669-b8ea-72242ff5e2c3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_ShowErrMsgWhenClick_2TimeButtonQA_Popup</testCaseId>

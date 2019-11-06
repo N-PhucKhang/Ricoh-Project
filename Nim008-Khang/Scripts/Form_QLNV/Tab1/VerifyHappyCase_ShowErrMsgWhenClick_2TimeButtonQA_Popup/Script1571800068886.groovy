@@ -7,6 +7,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev04', ('Password') : 'dev04'], FailureHandling.STOP_ON_FAILURE)
 WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?', FailureHandling.STOP_ON_FAILURE)
 WebUI.waitForPageLoad(3)
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab1/button_Selection_Company_Sales'))
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001')
+WebUI.delay(2)
+WebUI.check(findTestObject('Object Repository/QLNV_Form/Tab1/popup_checkAll'))
+WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab1/button_Popup_Choose_Sale_Comp'))
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('QLNV_Form/Tab1/button_Edit_Line1'))
 WebUI.delay(2)

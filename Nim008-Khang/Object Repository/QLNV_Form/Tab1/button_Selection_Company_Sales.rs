@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@value=&quot;販社選択&quot;]</value>
+         <value>//input[@id=&quot;nextButton_gnrqjsxyocax&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//input[@value=&quot;販社選択&quot;]</value>
+      <value>//input[@id=&quot;nextButton_gnrqjsxyocax&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

@@ -29,7 +29,7 @@ WebUI.delay(2)
 
 WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001')
 
-WebUI.click(findTestObject('sale_value_equal_26'))
+WebUI.click(findTestObject('sale_value_all'))
 
 WebUI.click(findTestObject('choice_button'))
 

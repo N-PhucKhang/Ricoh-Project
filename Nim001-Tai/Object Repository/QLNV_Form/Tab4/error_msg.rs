@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>choose_user_mail</name>
+   <name>error_msg</name>
    <tag></tag>
-   <elementGuidId>a3dad302-9014-42c5-9004-8868af26dd71</elementGuidId>
+   <elementGuidId>5e63b255-ee29-42f7-8bf4-b83ad95d4d9c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;jqg_gtr4_1&quot;]</value>
+         <value>//*[@id=&quot;imui-messagebox&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;jqg_gtr4_1&quot;]</value>
+      <value>//*[@id=&quot;imui-messagebox&quot;]</value>
    </webElementProperties>
 </WebElementEntity>

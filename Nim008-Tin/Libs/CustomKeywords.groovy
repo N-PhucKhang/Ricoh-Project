@@ -3,13 +3,7 @@
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
  */
 
-import java.sql.Connection
-
 import java.lang.String
-
-import com.katalon.plugin.keyword.connection.DBType
-
-import java.sql.ResultSet
 
 import java.util.LinkedList
 
@@ -18,6 +12,7 @@ import java.lang.Integer
 import java.util.ArrayList
 
 
+<<<<<<< HEAD
 def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.execute"(
     	Connection conn	
      , 	String queryString	) {
@@ -96,6 +91,8 @@ def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingGlo
          , 	query)
 }
 
+=======
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 def static "com.database.connectSql.connectDB"(
     	String server	
      , 	String port	
@@ -128,6 +125,7 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
+<<<<<<< HEAD
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.isEmptyResult"(
     	ResultSet rs	) {
     (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).isEmptyResult(
@@ -214,6 +212,8 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getSingleRow
          , 	rowIndex)
 }
 
+=======
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {
     (new com.helper.UploadFile.UpFile()).getDefaultAppicationRunningPath()
 }

@@ -1,6 +1,5 @@
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -18,7 +17,9 @@ WebUI.delay(2)
 
 WebUI.click(findTestObject('QLNV_Form/Tab3/button_Tab3_Clear_Selected_Document'))
 
-errMsg = WebUI.getText(findTestObject('label_errMsg'))
-WebUI.verifyMatch(errMsg , "対象がありません。チェックをしてください。", true, FailureHandling.STOP_ON_FAILURE)
+errMsg = WebUI.getText(findTestObject('QLNV_Form/Tab4/error_msg'))
+
+WebUI.verifyMatch(errMsg, '対象がありません。チェックをしてください。', true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
+

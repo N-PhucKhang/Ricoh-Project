@@ -69,4 +69,5 @@ WebUI.click(findTestObject('ok_button'))
 
 WebUI.verifyTextPresent('問い合わせ内容', false)
 
+WebUI.closeBrowser()
 

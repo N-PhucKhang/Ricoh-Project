@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>E%%Video%abc%abc.prj</name>
+	<name>C%%Users%Dell%Desktop%Ricoh-Project%Nim008-Khang%Nim008-Khang.prj</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1566887890108</id>
+			<id>1569377305416</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -26,7 +26,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1566887890114</id>
+			<id>1569377305431</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -35,7 +35,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1567994625047</id>
+			<id>1569378951675</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -44,7 +44,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1567994625062</id>
+			<id>1569378951692</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -53,11 +53,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571885112373</id>
-=======
-			<id>1571888706217</id>
->>>>>>> 0016de3ee64ca43d8696595cd957fd2ec651411d
+			<id>1570766521222</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -66,11 +62,25 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571885112373</id>
-=======
-			<id>1571888706220</id>
->>>>>>> 0016de3ee64ca43d8696595cd957fd2ec651411d
+			<id>1570766521233</id>
+			<name></name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>(.*\.svn-base$)|(.*\.png$)|(.*\.log$)|(.*\.xlsx$)|(.*\.xls$)|(.*\.csv$)|(.*\.txt$)</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1572488709991</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>.*\.svn$</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1572488709991</id>
 			<name></name>
 			<type>6</type>
 			<matcher>

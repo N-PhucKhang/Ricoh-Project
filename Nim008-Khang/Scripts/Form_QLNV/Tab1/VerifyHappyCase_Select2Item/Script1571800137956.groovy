@@ -19,7 +19,7 @@ WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_a
 
 WebUI.delay(2)
 
-WebUI.check(findTestObject('Object Repository/QLNV_Form/Tab1/checkbox_Popup_Line 1'))
+WebUI.check(findTestObject('Object Repository/QLNV_Form/Tab1/popup_checkAll'))
 
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab1/button_Popup_Choose_Sale_Comp'))
 
@@ -40,9 +40,9 @@ WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_a
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
     'Log_seaRch_uSer', 'imart_rfg')
 
-def DBSumUncollect = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_UNCOLLECTED) FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_UD_SALES_COM = \'26\'')
+def DBSumUncollect = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_DEBIT) FROM IMFR_UT_SF_NIM008_APL001')
 
-def DBSumOverpay = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_OVERPAYMENT) FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_UD_SALES_COM = \'26\'')
+def DBSumOverpay = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_CREDIT) FROM IMFR_UT_SF_NIM008_APL001')
 
 CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
 

@@ -2,7 +2,10 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+<<<<<<< HEAD
+=======
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -12,7 +15,10 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+<<<<<<< HEAD
+=======
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 import internal.GlobalVariable as GlobalVariable
 
 "Login to nim008_apl001 and switch to tab 2"
@@ -102,19 +108,19 @@ def array_summaries_from_db = [
 println('----- END GET SALES COM SUMMARIES FROM DB -----');
 
 println('----- GET DATAS GRID TABLE DETAIL -----');
-def gt_detail_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'('gt3');
+def gt_detail_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'("gt3");
 println('gt detail datas');
 println(gt_detail_datas);
 println('Summaries grid table detail: ' + CustomKeywords.'com.helpers.Tab2Helpers.countItems'(gt_detail_datas)
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 3)
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 0)
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 6)
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 7)
 );
 
 def array_summaries_detail_from_grid_table = [
 	CustomKeywords.'com.helpers.Tab2Helpers.countItems'(gt_detail_datas),
-	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 3),
 	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 0),
+	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 6),
 	CustomKeywords.'com.helpers.Tab2Helpers.getColumnTotalValue'(gt_detail_datas, 7)
 ]
 
@@ -125,18 +131,18 @@ println('----- GET DATAS GRID TABLE SUMMARIES -----');
 def gt_summaries_datas = CustomKeywords.'com.helpers.Tab2Helpers.getGridTableData'('gt2');
 println('gt summaries datas');
 println(gt_summaries_datas);
-println('Summaries grid table summaries: ' + gt_summaries_datas[0][0]
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4])
+println('Summaries grid table summaries: ' + gt_summaries_datas[0][5]
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][1])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][0])
+	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][2])
 	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3])
-	+ ' ' + CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
 );
 
 def array_summaries_from_grid_table = [
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][1]),
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][0]),
 	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][2]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][4]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3]),
-	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][6])
+	CustomKeywords.'com.helpers.Tab2Helpers.convertStringToBigDecimal'(gt_summaries_datas[0][3])
 ]
 
 println('----- END GET DATAS GRID TABLE SUMMARIES -----');

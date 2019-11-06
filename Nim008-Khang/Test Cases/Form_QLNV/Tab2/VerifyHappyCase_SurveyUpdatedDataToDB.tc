@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_SurveyUpdatedDataToDB</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c3a1c587-e512-4a21-9a32-6425f5046c16</testCaseGuid>
+</TestCaseEntity>

@@ -19,13 +19,13 @@
    <testCaseLink>
       <guid>e040ffdd-6a18-4bd4-90d9-b8d86325ca8b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_SelectDataGridTable</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dd6c10bb-af23-40ff-a187-38a6e9b3730f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab1/VerifyHappyCase_ShowErrMsgWhenClickButtonQA</testCaseId>
    </testCaseLink>
    <testCaseLink>

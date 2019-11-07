@@ -7,6 +7,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 'Check SUM Uncollect and Overpay'
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev04', ('Password') : 'dev04'], FailureHandling.STOP_ON_FAILURE)
 
+'Insert Data Test'
+WebUI.callTestCase(findTestCase('Common/Insert_Data_Test'), [:], FailureHandling.STOP_ON_FAILURE)
+'END Insert Data Test'
 WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?', FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(3)
@@ -16,6 +19,8 @@ WebUI.delay(2)
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab1/button_Selection_Company_Sales'))
 
 WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl001')
+
+WebUI.waitForPageLoad(2)
 
 WebUI.delay(2)
 
@@ -40,9 +45,9 @@ WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_a
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
     'Log_seaRch_uSer', 'imart_rfg')
 
-def DBSumUncollect = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_DEBIT) FROM IMFR_UT_SF_NIM008_APL001')
+def DBSumUncollect = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_DEBIT) FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_UD_DELAY_FLAG = \'1\'')
 
-def DBSumOverpay = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_CREDIT) FROM IMFR_UT_SF_NIM008_APL001')
+def DBSumOverpay = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT SUM(IMFR_UD_FUNC_NOW_CREDIT) FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_UD_DELAY_FLAG = \'1\'')
 
 CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
 

@@ -13,7 +13,7 @@ WebUI.waitForPageLoad(3)
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_3'))
-
+WebUI.waitForPageLoad(3)
 WebUI.delay(2)
 
 WebUI.click(findTestObject('QLNV_Form/Tab3/button_Tab3_Clear_Selected_Document'))

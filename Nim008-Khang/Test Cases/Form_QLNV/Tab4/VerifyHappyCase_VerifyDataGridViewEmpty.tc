@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_VerifyDataGridViewEmpty</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec3b62fe-9100-497c-b4ed-cb3b38e3afaa</testCaseGuid>
+</TestCaseEntity>

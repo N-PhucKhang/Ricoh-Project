@@ -16,9 +16,19 @@ WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab_4'))
 
 WebUI.delay(2)
 
+WebUI.check(findTestObject('Object Repository/QLNV_Form/Tab4/checkbox_CheckAll'))
+WebUI.delay(2)
+
+
 WebUI.click(findTestObject('QLNV_Form/Tab4/button_CancellClearance'))
 
 errMsg = WebUI.getText(findTestObject('label_errMsg'))
 WebUI.verifyMatch(errMsg , "対象がありません。チェックをしてください。", true, FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(2)
+
+String countRows = WebUI.executeJavaScript("return \$('#gt6').jqGrid('getGridParam', 'records');", null)
+println(countRows)
+
+WebUI.verifyEqual((countRows[0])[0], '0')
 
 WebUI.closeBrowser()

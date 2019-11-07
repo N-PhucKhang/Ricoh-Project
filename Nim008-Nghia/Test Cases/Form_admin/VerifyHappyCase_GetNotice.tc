@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_GetNotice</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b9815cc0-d581-46d9-9d59-101e07893605</testCaseGuid>
+</TestCaseEntity>

@@ -1,11 +1,17 @@
 package com.helpers
+<<<<<<< HEAD
+=======
 
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+<<<<<<< HEAD
+=======
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -16,8 +22,11 @@ import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+<<<<<<< HEAD
+=======
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 import internal.GlobalVariable
 
 public class Tab2Helpers {
@@ -41,8 +50,10 @@ public class Tab2Helpers {
 
 	@Keyword
 	def getColumnTotalValue(LinkedList<String[]> array, Integer columnNo) {
+		println(columnNo)
 		BigDecimal total = new BigDecimal('0');
 		for (int i = 0; i < array.size(); i++) {
+			println(array.get(i).get(columnNo))
 			total = total.add(new BigDecimal(array.get(i).get(columnNo)));
 		}
 		return total;
@@ -92,19 +103,12 @@ public class Tab2Helpers {
 		println(' => array summaries from grid table:');
 		println('    ' + array_summaries_from_grid_table);
 		println(' =====> SURVEY RESULT');
-		
+
 		def arrayHeader = [];
 		def arrayResult = [];
-		
-		arrayHeader.add([
-			'case',
-			'summaries from sql detail',
-			'summaries from sql summaries',
-			'summaries from grid table detail',
-			'summaries from grid table summaries',
-			'result'
-		]);
-		
+
+		arrayHeader.add(['case', 'summaries from sql detail', 'summaries from sql summaries', 'summaries from grid table detail', 'summaries from grid table summaries', 'result']);
+
 		arrayResult.add([
 			'item count',
 			array_summaries_detail_from_db[0],
@@ -117,7 +121,7 @@ public class Tab2Helpers {
 			&& array_summaries_detail_from_db[0] == array_summaries_from_grid_table[0]
 			)
 		]);
-	
+
 		arrayResult.add([
 			'func now debit total',
 			array_summaries_detail_from_db[1],
@@ -130,7 +134,7 @@ public class Tab2Helpers {
 			&& array_summaries_detail_from_db[1] == array_summaries_from_grid_table[1]
 			)
 		]);
-	
+
 		arrayResult.add([
 			'func now credit total',
 			array_summaries_detail_from_db[2],
@@ -143,7 +147,7 @@ public class Tab2Helpers {
 				&& array_summaries_detail_from_db[2] == array_summaries_from_grid_table[2]
 			)
 		]);
-	
+
 		arrayResult.add([
 			'amount of money total',
 			array_summaries_detail_from_db[3],

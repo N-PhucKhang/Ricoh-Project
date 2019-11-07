@@ -17,11 +17,11 @@ WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'de
 
 WebUI.navigateToUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(10)
+WebUI.waitForJQueryLoad(5)
 
 WebUI.click(findTestObject('QLNV_Form/Tab_4'))
 
-WebUI.waitForPageLoad(4)
+WebUI.waitForJQueryLoad(5)
 
 WebUI.click(findTestObject('QLNV_Form/Tab4/checkbox_4'))
 

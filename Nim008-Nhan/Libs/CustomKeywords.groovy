@@ -20,22 +20,6 @@ def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.execute"(
          , 	queryString)
 }
 
-def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.createConnection"(
-    	DBType type	
-     , 	String server	
-     , 	String port	
-     , 	String dbName	
-     , 	String userName	
-     , 	String Password	) {
-    (new com.katalon.plugin.keyword.connection.DatabaseKeywords()).createConnection(
-        	type
-         , 	server
-         , 	port
-         , 	dbName
-         , 	userName
-         , 	Password)
-}
-
 def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.executeQuery"(
     	Connection conn	
      , 	String queryString	) {
@@ -52,14 +36,30 @@ def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.executeUpdate
          , 	queryString)
 }
 
-def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.getGlobalConnection"() {
-    (new com.katalon.plugin.keyword.connection.DatabaseKeywords()).getGlobalConnection()
-}
-
 def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.closeConnection"(
     	Connection conn	) {
     (new com.katalon.plugin.keyword.connection.DatabaseKeywords()).closeConnection(
         	conn)
+}
+
+def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.getGlobalConnection"() {
+    (new com.katalon.plugin.keyword.connection.DatabaseKeywords()).getGlobalConnection()
+}
+
+def static "com.katalon.plugin.keyword.connection.DatabaseKeywords.createConnection"(
+    	DBType type	
+     , 	String server	
+     , 	String port	
+     , 	String dbName	
+     , 	String userName	
+     , 	String Password	) {
+    (new com.katalon.plugin.keyword.connection.DatabaseKeywords()).createConnection(
+        	type
+         , 	server
+         , 	port
+         , 	dbName
+         , 	userName
+         , 	Password)
 }
 
 def static "com.katalon.plugin.keyword.generator.DataFileKeywords.createUsingGlobalConnection"(
@@ -122,16 +122,14 @@ def static "com.database.connectSql.execute"(
         	queryString)
 }
 
-def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getRowCount"(
-    	ResultSet rs	) {
-    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getRowCount(
-        	rs)
-}
-
-def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getColumnCount"(
-    	ResultSet rs	) {
-    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getColumnCount(
-        	rs)
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListRowValue"(
+    	ResultSet rs	
+     , 	int fromRowIndex	
+     , 	int toRowIndex	) {
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getListRowValue(
+        	rs
+         , 	fromRowIndex
+         , 	toRowIndex)
 }
 
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListCellValue"(
@@ -150,22 +148,6 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListCellV
          , 	columnName)
 }
 
-def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.isEmptyResult"(
-    	ResultSet rs	) {
-    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).isEmptyResult(
-        	rs)
-}
-
-def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getListRowValue"(
-    	ResultSet rs	
-     , 	int fromRowIndex	
-     , 	int toRowIndex	) {
-    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getListRowValue(
-        	rs
-         , 	fromRowIndex
-         , 	toRowIndex)
-}
-
 def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.exportToCSV"(
     	ResultSet rs	
      , 	String pathFile	) {
@@ -174,9 +156,21 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.exportToCSV"
          , 	pathFile)
 }
 
-def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.resultSetToArrayList"(
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.isEmptyResult"(
     	ResultSet rs	) {
-    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).resultSetToArrayList(
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).isEmptyResult(
+        	rs)
+}
+
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getRowCount"(
+    	ResultSet rs	) {
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getRowCount(
+        	rs)
+}
+
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getColumnCount"(
+    	ResultSet rs	) {
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).getColumnCount(
         	rs)
 }
 
@@ -206,6 +200,12 @@ def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.getSingleCel
         	rs
          , 	rowIndex
          , 	columnName)
+}
+
+def static "com.katalon.plugin.keyword.connection.ResultSetKeywords.resultSetToArrayList"(
+    	ResultSet rs	) {
+    (new com.katalon.plugin.keyword.connection.ResultSetKeywords()).resultSetToArrayList(
+        	rs)
 }
 
 def static "com.helper.UploadFile.UpFile.getDefaultAppicationRunningPath"() {

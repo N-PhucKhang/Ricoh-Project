@@ -81,6 +81,8 @@
 		</filter>
 		<filter>
 			<id>1572423443581</id>
+<<<<<<< HEAD
+=======
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -153,6 +155,7 @@
 		</filter>
 		<filter>
 			<id>1572571204717</id>
+>>>>>>> dcf6c7b00b4e930ef234d9410e2be4ed5a585c23
 			<name></name>
 			<type>6</type>
 			<matcher>

@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\tab3\\TC-37\\20191106_111710\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\Dell\\AppData\\Local\\Temp\\Katalon\\Test Cases\\tab3\\TC-33\\20191107_103248\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/tab3/TC-37', new TestCaseBinding('Test Cases/tab3/TC-37',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/tab3/TC-33', new TestCaseBinding('Test Cases/tab3/TC-33',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

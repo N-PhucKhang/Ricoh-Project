@@ -12,6 +12,10 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev09', ('Password') : 'dev09'], FailureHandling.STOP_ON_FAILURE)
 
@@ -27,7 +31,7 @@ WebUI.click(findTestObject('QLNV_Form/Tab4/checkbox_4'))
 
 hdd_insertId = WebUI.getAttribute(findTestObject('QLNV_Form/Tab4/hdd_insert_id_4'), 'title')
 
-WebUI.click(findTestObject('QLNV_Form/Tab4/clear_bt4'))
+println(hdd_insertId)
 
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
     'Log_seaRch_uSer', 'imart_rfg')
@@ -42,5 +46,5 @@ println('CheckCombinationKey: ' + DBClearedFlag)
 
 CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
 
-WebUI.verifyMatch((DBClearedFlag[0])[0], '0', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch((DBClearedFlag[0])[0], '1', true, FailureHandling.STOP_ON_FAILURE)
 

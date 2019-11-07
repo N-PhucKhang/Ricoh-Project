@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>choose_notice_date</name>
+   <tag></tag>
+   <elementGuidId>23e46c55-c5cd-4278-9072-68b548ab266c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[1]/td[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;ui-datepicker-div&quot;]/table/tbody/tr[1]/td[2]/a</value>
+   </webElementProperties>
+</WebElementEntity>

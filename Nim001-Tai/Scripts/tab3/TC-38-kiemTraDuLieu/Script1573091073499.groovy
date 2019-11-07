@@ -12,6 +12,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Common/Login_User_Normal'), [('Username') : 'dev09', ('Password') : 'dev09'], FailureHandling.STOP_ON_FAILURE)
 
@@ -23,24 +25,17 @@ WebUI.click(findTestObject('QLNV_Form/Tab_4'))
 
 WebUI.waitForJQueryLoad(5)
 
-WebUI.click(findTestObject('QLNV_Form/Tab4/checkbox_4'))
+String countRows1 = WebUI.executeJavaScript("return \$('#gt6').jqGrid('getGridParam', 'records');", null)
 
-hdd_insertId = WebUI.getAttribute(findTestObject('QLNV_Form/Tab4/hdd_insert_id_4'), 'title')
+WebUI.click(findTestObject('QLNV_Form/Tab_3'))
 
-WebUI.click(findTestObject('QLNV_Form/Tab4/clear_bt4'))
+WebUI.waitForJQueryLoad(5)
 
-CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 
-    'Log_seaRch_uSer', 'imart_rfg')
+WebUI.click(findTestObject('QLNV_Form/Tab_4'))
 
-String sql = 'SELECT IMFR_UD_CLEARED_FLAG FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_SD_INSERT_ID = ' + hdd_insertId
+WebUI.waitForJQueryLoad(5)
 
-println(sql)
+String countRows2 = WebUI.executeJavaScript("return \$('#gt6').jqGrid('getGridParam', 'records');", null)
 
-def DBClearedFlag = CustomKeywords.'com.database.connectSql.executeQuery'(sql)
-
-println('CheckCombinationKey: ' + DBClearedFlag)
-
-CustomKeywords.'com.database.connectSql.closeDatabaseConnection'()
-
-WebUI.verifyMatch((DBClearedFlag[0])[0], '0', true, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyMatch((countRows1[0])[0], (countRows2[0])[0], true, FailureHandling.STOP_ON_FAILURE)
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Site_Map</name>
+   <tag></tag>
+   <elementGuidId>3fbd9173-ec42-4dc1-8623-a2018f370202</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;im_global_nav&quot;]/li[5]/a/span/span/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;im_global_nav&quot;]/li[5]/a/span/span/span</value>
+   </webElementProperties>
+</WebElementEntity>

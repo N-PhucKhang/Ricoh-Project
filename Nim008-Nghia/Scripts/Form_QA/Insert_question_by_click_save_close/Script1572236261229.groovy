@@ -50,7 +50,9 @@ WebUI.check(findTestObject('qa_div_1_checkbox'))
 
 WebUI.click(findTestObject('TO_button'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.switchToWindowIndex(2)
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl002')
+
+//WebUI.switchToWindowIndex(2)
 
 WebUI.setText(findTestObject('search_user_name'), 'a')
 
@@ -60,7 +62,9 @@ WebUI.click(findTestObject('choose_user_mail'))
 
 WebUI.click(findTestObject('select_button'))
 
-WebUI.switchToWindowIndex(1)
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl//forma/normal/view/regist_application_view/sf_nim008_apl002?imui-theme-builder-module=headwithcontainer')
+
+//WebUI.switchToWindowIndex(1)
 
 WebUI.setText(findTestObject('question_textbox'), '金曜日は25日ですか？inserted by NghiaHH')
 String link_registraton = WebUI.getUrl()
@@ -83,8 +87,8 @@ try {
 }
 WebUI.verifyEqual(flag, 'Closed popup')
 
-WebUI.switchToWindowIndex(0)
-
+//WebUI.switchToWindowIndex(0)
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
 WebUI.click(findTestObject('list_question_tab'))
 
 def countRow = CustomKeywords.'com.database.connectSql.executeQuery'('SELECT COUNT(*) FROM IMFR_UT_SF_NIM008_APL002')

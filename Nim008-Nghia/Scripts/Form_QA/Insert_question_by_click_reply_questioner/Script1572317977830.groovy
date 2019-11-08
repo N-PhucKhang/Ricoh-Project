@@ -45,7 +45,9 @@ WebUI.check(findTestObject('qa_div_1_checkbox'))
 
 WebUI.click(findTestObject('TO_button'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.switchToWindowIndex(2)
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/display_application_view/sf_nim008_apl002')
+
+//WebUI.switchToWindowIndex(2)
 
 WebUI.setText(findTestObject('search_user_name'), 'a')
 
@@ -84,15 +86,23 @@ WebUI.click(findTestObject('send_response_button'))
 
 WebUI.click(findTestObject('ok_button'))
 
-WebUI.switchToWindowIndex(0)
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowUrl('http://132.145.113.198/imsl/forma/normal/view/regist_application_view/sf_nim008_apl001?')
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('list_question_tab'))
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('pager'))
 
 WebUI.click(findTestObject('pager_200'))
 
 WebUI.verifyTextPresent('金曜日は25日ですか？inserted by NghiaHH', false)
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('list_question_tab'))
 

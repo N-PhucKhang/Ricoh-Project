@@ -11,19 +11,19 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>25a200ef-e8af-4d90-a267-28db17488d6b</testSuiteGuid>
    <testCaseLink>
-      <guid>b883007e-bec0-4c92-8146-fa4981347773</guid>
+      <guid>f0865f6c-3246-4a15-b93c-f4d00c9a11c3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab3/VerifyHappyCase_ShowErrMsgWhenClickButton_Clear</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b31490b9-7888-4d30-b67d-168ddba13c73</guid>
+      <guid>68a25eb0-e4bc-4c59-a194-89476f33766b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab3/VerifyHappyCase_SurveyDataGridTableSummaryAndDetail</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1d39bd0a-1cb2-4143-b84b-b8a21b3c2118</guid>
+      <guid>41ef5c8d-0bfa-4be1-89d8-c3a4e1ea4313</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Form_QLNV/Tab3/VerifyHappyCase_SurveyUpdatedDataToDB</testCaseId>

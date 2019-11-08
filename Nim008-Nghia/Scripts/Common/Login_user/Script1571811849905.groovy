@@ -27,5 +27,6 @@ WebUI.setText(findTestObject('password_textbox'), 'dev06')
 
 WebUI.click(findTestObject('Login_button'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(2)
+//WebUI.waitForPageLoad(2)
 
+WebUI.waitForElementVisible(findTestObject('Object Repository/button_Site_Map'), 0)

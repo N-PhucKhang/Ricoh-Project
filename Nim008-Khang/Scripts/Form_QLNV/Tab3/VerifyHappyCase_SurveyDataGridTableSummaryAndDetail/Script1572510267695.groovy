@@ -21,7 +21,7 @@ WebUI.delay(2)
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab3/button_Product'))
 
 WebUI.switchToWindowIndex(1)
-WebUI.waitForPageLoad(3)
+WebUI.delay(2)
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab3/checkbox_Popup_CheckAll_Product'))
 
 WebUI.click(findTestObject('Object Repository/QLNV_Form/Tab3/button_Popup_Choose'))

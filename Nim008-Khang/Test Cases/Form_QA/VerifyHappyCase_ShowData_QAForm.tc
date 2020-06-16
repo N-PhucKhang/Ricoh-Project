@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyHappyCase_ShowData_QAForm</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c5ec306e-e21e-4b74-a6b2-8af98e121a5e</testCaseGuid>
+</TestCaseEntity>

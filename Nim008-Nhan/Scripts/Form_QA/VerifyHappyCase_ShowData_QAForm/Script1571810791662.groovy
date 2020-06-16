@@ -26,6 +26,8 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Page_/input__im_passwor
 
 WebUI.click(findTestObject('Object Repository/Page_/input__imui-btn-login'))
 
+WebUI.waitForPageLoad(3)
+
 WebUI.click(findTestObject('Object Repository/Page_/span_'))
 
 WebUI.delay(3) 

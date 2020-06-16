@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id=&quot;imfr-gt13_image1&quot;]/img</value>
+         <value>//*[@id=&quot;1&quot;]/td[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id=&quot;imfr-gt13_image1&quot;]/img</value>
+      <value>//*[@id=&quot;1&quot;]/td[2]/img</value>
    </webElementProperties>
 </WebElementEntity>

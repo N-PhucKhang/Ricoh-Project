@@ -116,5 +116,6 @@
 	<classpathentry kind="lib" path="C:/Katalon_Studio_Windows_64-6.2.0/configuration/plugin/install/27074/1.0.2/katalon-dbms-keywords.jar"/>
 	<classpathentry kind="lib" path="C:/Katalon_Studio_Windows_64-6.2.0/configuration/plugin/install/23018/1.0.6/katalon-studio-report-plugin.jar"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
+	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

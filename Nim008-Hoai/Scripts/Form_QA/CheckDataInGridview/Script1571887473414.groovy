@@ -22,13 +22,15 @@ WebUI.click(findTestObject('QLNV_Form/Tab6/button_Tab6_Edit_Line1'))
 WebUI.delay(2)
 
 WebUI.switchToWindowIndex(1)
+String insertID = WebUI.executeJavaScript("return new URL(window.location.href).searchParams.get('imfr_insert_id')", null)
 
-def paper_no = WebUI.getAttribute(findTestObject('QLNV_Form/Tab6/input_paper_no'), 'value')
-//
-println(paper_no.toString())
+println(insertID)
+//def paper_no = WebUI.getAttribute(findTestObject('QLNV_Form/Tab6/input_paper_no'), 'value')
+
+//println(paper_no.toString())
 
 CustomKeywords.'com.database.connectSql.connectDB'('132.145.123.77', '1521', 'pdborcl.rsubnet.rvcn.oraclevcn.com', 'log_search_user', 'Log_seaRch_uSer', 'imart_rfg')
-def sql = 'SELECT imfr_ud_journal_date , imfr_ud_voucher_no , imfr_ud_product_cd , imfr_ud_product_name , imfr_ud_uncollected , imfr_ud_overpayment , imfr_ud_inquiry_number , imfr_ud_section_nm , imfr_ud_application_key , imfr_ud_counter_dept_cd , imfr_ud_detail_description FROM imfr_ut_sf_nim008_apl001 WHERE imfr_sd_insert_id IN (' + paper_no + ')'
+def sql = 'SELECT IMFR_UD_JOURNAL_DATE , IMFR_UD_VOUCHER_NO , IMFR_UD_PRODUCT_CD , IMFR_UD_PRODUCT_NAME , IMFR_UD_FUNC_NOW_DEBIT , IMFR_UD_FUNC_NOW_CREDIT , IMFR_UD_INQUIRY_NUMBER , IMFR_UD_SECTION_NM , IMFR_UD_APPLICATION_KEY , IMFR_UD_COUNTER_DEPT_CD , IMFR_UD_DETAIL_DESCRIPTION FROM IMFR_UT_SF_NIM008_APL001 WHERE IMFR_SD_INSERT_ID IN (' + insertID + ')'
 println(sql)
 def DBCombinationKey = CustomKeywords.'com.database.connectSql.executeQuery'(sql)
 
